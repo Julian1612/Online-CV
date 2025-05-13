@@ -103,7 +103,6 @@ function initTerminal() {
         }, 1500);
 
         input.value = "";
-        return;
       } else {
         const response = commands[cmd] || `bash: ${cmd}: command not found
         Try 'help' for available commands.`;

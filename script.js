@@ -1,5 +1,22 @@
 const input = document.getElementById("commandInput");
 const output = document.getElementById("output");
+const welcomeText = `Welcome to Julian's Interactive CV Terminal
+Type 'help' to see available commands.
+Use commands like 'cat skills.txt' or 'whoami'\n\n`;
+
+let i = 0;
+function typeWelcome() {
+  const welcomeEl = document.getElementById("welcome");
+  if (i < welcomeText.length) {
+    welcomeEl.innerHTML += welcomeText.charAt(i) === "\n" ? "<br/>" : welcomeText.charAt(i);
+    i++;
+    setTimeout(typeWelcome, 25); // Tippgeschwindigkeit
+  } else {
+    document.querySelector(".input-block").style.display = "block";
+    document.getElementById("commandInput").focus();
+  }
+}
+window.onload = typeWelcome;
 
 const commands = {
   "help": `usage: [command]

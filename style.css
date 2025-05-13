@@ -38,3 +38,17 @@ input[type="text"] {
   font-size: inherit;
   width: 100%;
 }
+
+#welcome {
+  margin-bottom: 1rem;
+  color: #99ff99;
+  font-style: italic;
+  white-space: pre-wrap;
+}
+
+.cmd {
+  color: #00ffff;
+  font-weight: bold;
+}
+
+

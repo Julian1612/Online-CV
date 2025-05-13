@@ -1,0 +1,58 @@
+<!-- gui.html (retro 90s GUI) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JulianOS Desktop</title>
+  <link rel="stylesheet" href="gui.css" />
+</head>
+<body>
+  <div class="desktop">
+    <div class="icon" onclick="openWindow('explorerWindow')">
+      <img src="folder-icon.png" alt="Folder">
+      <span>Projects</span>
+    </div>
+    <div class="icon" onclick="openWindow('aboutWindow')">
+      <img src="text-icon.png" alt="Text File">
+      <span>About Me</span>
+    </div>
+
+    <div class="window" id="explorerWindow">
+      <div class="title-bar">
+        <span class="title">File Explorer</span>
+        <div class="buttons">
+          <div class="btn close" onclick="closeWindow('explorerWindow')"></div>
+        </div>
+      </div>
+      <div class="window-body">
+        <ul class="file-list">
+          <li>📄 resume.pdf</li>
+          <li>📂 projects</li>
+          <li>🖼️ portfolio.png</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="window" id="aboutWindow">
+      <div class="title-bar">
+        <span class="title">About Me</span>
+        <div class="buttons">
+          <div class="btn close" onclick="closeWindow('aboutWindow')"></div>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>Hi, I'm Julian – a curious developer who loves minimalism, tech, and retro vibes 😎</p>
+      </div>
+    </div>
+
+    <div class="taskbar">
+      <span class="start-button">Start</span>
+      <span class="task">JulianOS</span>
+      <span class="clock" id="clock"></span>
+    </div>
+  </div>
+
+  <script src="gui.js"></script>
+</body>
+</html>

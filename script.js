@@ -44,6 +44,15 @@ Frameworks & Tools:
   "clear": ""
 };
 
+// open linkedin
+// open github
+// open mail
+// echo hello world 
+// curl -O CV.pdf
+// startx -> startet einen desktop auf dem ein ordner ist mit meinem bewerbungs unterlagen cv, ein browser in dem ein tap mit 
+// linkedin, github offen ist, ein email programm in dem man an mich eine mail verfassen kann. 
+
+
 function runRmRf(output) {
   const steps = [
     "[ WARNING ] Deleting system files...",
@@ -85,6 +94,16 @@ function initTerminal() {
     } else if (cmd == "rm -rf /") {
         runRmRf(output);
         input.value = "";
+    } else if (cmd === "startx") {
+        output.innerHTML += `<div><span class="prompt">julian@cv:~$</span> ${cmd}</div>`;
+        output.innerHTML += `<div>Starting X Server... Launching GUI...</div>`;
+
+        setTimeout(() => {
+        window.location.href = "gui.html"; // GUI wird geladen
+        }, 1500);
+
+        input.value = "";
+        return;
     }
     else {
         const response = commands[cmd] || `bash: ${cmd}: command not found

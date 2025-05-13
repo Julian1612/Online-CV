@@ -1,0 +1,100 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background: #008080;
+  font-family: 'Courier New', monospace;
+}
+
+.desktop {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.icon {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icon img {
+  width: 48px;
+  height: 48px;
+}
+
+.icon span {
+  color: white;
+  font-size: 14px;
+  display: block;
+  margin-top: 4px;
+}
+
+.window {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 300px;
+  background: #c0c0c0;
+  border: 2px solid #000;
+  box-shadow: 2px 2px #333;
+  z-index: 10;
+  display: none;
+}
+
+.title-bar {
+  background: navy;
+  color: white;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-body {
+  padding: 10px;
+  background: white;
+  color: black;
+  font-size: 14px;
+}
+
+.buttons .btn {
+  width: 12px;
+  height: 12px;
+  background: red;
+  margin-left: 4px;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.taskbar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 14px;
+  justify-content: space-between;
+}
+
+.start-button {
+  background: #555;
+  padding: 3px 10px;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
+.task {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.clock {
+  font-family: monospace;
+}

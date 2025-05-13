@@ -89,12 +89,12 @@ function initTerminal() {
       const cmd = input.value.trim();
       output.innerHTML += `<div><span class="prompt">julian@cv:~$</span> ${cmd}</div>`;
 
-    if (cmd === "clear") {
+      if (cmd === "clear") {
         output.innerHTML = "";
-    } else if (cmd == "rm -rf /") {
+      } else if (cmd == "rm -rf /") {
         runRmRf(output);
         input.value = "";
-    } else if (cmd === "startx") {
+      } else if (cmd === "startx") {
         output.innerHTML += `<div><span class="prompt">julian@cv:~$</span> ${cmd}</div>`;
         output.innerHTML += `<div>Starting X Server... Launching GUI...</div>`;
 
@@ -104,12 +104,11 @@ function initTerminal() {
 
         input.value = "";
         return;
-    }
-    else {
+      } else {
         const response = commands[cmd] || `bash: ${cmd}: command not found
         Try 'help' for available commands.`;
         output.innerHTML += `<pre>${response}</pre>`;
-    }
+      }
 
       input.value = "";
       output.scrollTop = output.scrollHeight;

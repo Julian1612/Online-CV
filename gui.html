@@ -8,15 +8,16 @@
 </head>
 <body>
   <div class="desktop">
-    <div class="icon" onclick="openWindow('explorerWindow')">
+    <div class="icon" onclick="openWindow('projectsFolder')">
       <img src="folder-icon.png" alt="Folder">
       <span>Projects</span>
-    </div>
+    </div>    
     <div class="icon" onclick="openWindow('aboutWindow')">
       <img src="text-icon.png" alt="Text File">
       <span>About Me</span>
     </div>
 
+    <!-- File Explorer
     <div class="window" id="explorerWindow">
       <div class="title-bar">
         <span class="title">File Explorer</span>
@@ -27,12 +28,65 @@
       <div class="window-body">
         <ul class="file-list">
           <li>📄 resume.pdf</li>
-          <li>📂 projects</li>
+          <li class="clickable" onclick="openWindow('projectsFolder')">📂 projects</li>
           <li>🖼️ portfolio.png</li>
         </ul>
       </div>
+    </div> -->
+
+    <!-- Projects Folder -->
+    <div class="window small" id="projectsFolder">
+      <div class="title-bar">
+        <span class="title">projects</span>
+        <div class="buttons">
+          <div class="btn close" onclick="closeWindow('projectsFolder')"></div>
+        </div>
+      </div>
+      <div class="window-body">
+        <ul class="file-list">
+          <li><a href="#" onclick="openTxtFile('file1')">📝 project1.txt</a></li>
+          <li><a href="#" onclick="openTxtFile('file2')">📝 project2.txt</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+    <!-- Text File 1 -->
+    <div class="window" id="file1">
+      <div class="title-bar">
+        <span class="title">project1.txt</span>
+        <div class="buttons">
+          <div class="btn close" onclick="closeWindow('file1')"></div>
+        </div>
+      </div>
+      <div class="window-body scrollable">
+        <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Curabitur a justo nec felis sagittis facilisis.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+      </div>
     </div>
 
+    <!-- Text File 2 -->
+    <div class="window" id="file2">
+      <div class="title-bar">
+        <span class="title">project2.txt</span>
+        <div class="buttons">
+          <div class="btn close" onclick="closeWindow('file2')"></div>
+        </div>
+      </div>
+      <div class="window-body scrollable">
+        <p>
+Dies ist der Inhalt von project2.txt.
+
+Hier könnte z. B. eine Projektbeschreibung stehen
+oder dein persönliches Devlog.
+        </p>
+      </div>
+    </div>
+
+    <!-- About Me -->
     <div class="window" id="aboutWindow">
       <div class="title-bar">
         <span class="title">About Me</span>
@@ -45,8 +99,16 @@
       </div>
     </div>
 
+    <!-- Taskbar -->
     <div class="taskbar">
-      <span class="start-button">Start</span>
+      <div class="start-menu-wrapper">
+        <img src="start-icon.png" alt="Start" class="start-button" onclick="toggleStartMenu()" />
+        <div class="start-menu" id="startMenu">
+          <div class="menu-item" onclick="alert('Settings öffnen')">⚙️ Settings</div>
+          <div class="menu-item" onclick="window.location.href = 'index.html'">💻 Terminal</div>
+          <div class="menu-item" onclick="alert('System wird heruntergefahren...')">⏻ Ausschalten</div>
+        </div>
+      </div>
       <span class="task">JulianOS</span>
       <span class="clock" id="clock"></span>
     </div>

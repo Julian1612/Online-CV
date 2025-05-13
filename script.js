@@ -1,19 +1,20 @@
 const commands = {
-  "help": `Available commands:/n
+  "help": 
+  `Available commands:/n
 
-  whoami             Display information/n
-  ls                 List available virtual files/n
-  cat about.txt      Show CV
-  cat skills.txt     Show technical skills
-  cat experience.txt Show previous work experience
-  clear              Clear the terminal output
-  rm -rf /           
+    whoami             Display information/n
+    ls                 List available virtual files/n
+    cat about.txt      Show CV
+    cat skills.txt     Show technical skills
+    cat experience.txt Show previous work experience
+    clear              Clear the terminal output
+    rm -rf /           
 
 
-Example usage:
-  cat skills.txt
-  man whoami
-  clear`,
+  Example usage:
+    cat skills.txt
+    whoami
+    clear`,
 
   "whoami": `julian.schneider
 Full-Stack Dev | Mechatronics background | Loves minimalism`,

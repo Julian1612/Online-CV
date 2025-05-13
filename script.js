@@ -1,5 +1,40 @@
 const commands = {
-  // bleibt wie bei dir
+  "help": `usage: [command]
+
+Available commands:
+  whoami             Show info about me
+  ls                 List available files
+  cat about.txt      Show biography
+  cat skills.txt     List skills
+  cat experience.txt Show work experience
+  clear              Clear the terminal`,
+
+  "whoami": `julian.schneider
+Full-Stack Dev | Mechatronics background | Loves minimalism`,
+
+  "ls": `about.txt  skills.txt  experience.txt`,
+
+  "cat about.txt": `Julian Schneider is a developer with a mechatronics background.
+He's worked on IoT prototypes, PowerApps, and cloud tools.`,
+
+  "cat skills.txt": `Languages:
+  - Python
+  - C / C++
+  - JavaScript
+  - Bash
+
+Frameworks & Tools:
+  - Node.js / Vue.js
+  - AWS / Docker / Git
+  - Linux / VS Code`,
+
+  "cat experience.txt": `2024 - Porsche
+  • Built internal MS PowerApps, supported digitalisation projects
+
+2023 - MANN+HUMMEL
+  • Developed IoT prototype incl. hardware and firmware`,
+
+  "clear": ""
 };
 
 function initTerminal() {
@@ -40,7 +75,7 @@ Use commands like 'cat skills.txt' or 'whoami'\n\n`;
     } else {
       document.querySelector(".input-block").style.display = "block";
       document.getElementById("commandInput").focus();
-      initTerminal(); // <== HIER aktivieren wir den Listener
+      initTerminal();
     }
   }
 

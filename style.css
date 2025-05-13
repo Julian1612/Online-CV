@@ -8,21 +8,23 @@ body {
 }
 
 .terminal {
-  padding: 1rem;
+  padding: 2rem;
   max-width: 800px;
   margin: auto;
   display: block;
 }
 
-#output {
+#welcome {
+  color: #99ff99;
+  font-style: italic;
   white-space: pre-wrap;
-  flex-grow: 1;
-  overflow-y: auto;
+  margin-bottom: 1rem;
 }
 
 .input-line {
   display: flex;
   align-items: center;
+  margin-top: 0.5rem;
 }
 
 .prompt {
@@ -39,16 +41,7 @@ input[type="text"] {
   width: 100%;
 }
 
-#welcome {
-  margin-bottom: 1rem;
-  color: #99ff99;
-  font-style: italic;
-  white-space: pre-wrap;
-}
-
 .cmd {
   color: #00ffff;
   font-weight: bold;
 }
-
-

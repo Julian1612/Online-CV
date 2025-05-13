@@ -95,7 +95,6 @@ function initTerminal() {
         runRmRf(output);
         input.value = "";
       } else if (cmd === "startx") {
-        output.innerHTML += `<div><span class="prompt">julian@cv:~$</span> ${cmd}</div>`;
         output.innerHTML += `<div>Starting X Server... Launching GUI...</div>`;
 
         setTimeout(() => {

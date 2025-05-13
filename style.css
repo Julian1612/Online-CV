@@ -11,9 +11,7 @@ body {
   padding: 2rem;
   max-width: 800px;
   margin: auto;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 
 #output {

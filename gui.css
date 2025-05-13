@@ -6,10 +6,15 @@ body {
 }
 
 .desktop {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 20px;
+  padding: 20px;
   position: relative;
   width: 100vw;
   height: 100vh;
-  padding: 20px;
+  background-color: #008080;
   box-sizing: border-box;
 }
 
@@ -18,7 +23,6 @@ body {
   text-align: center;
   margin: 10px;
   cursor: pointer;
-  display: inline-block;
 }
 
 .icon img {

@@ -3,21 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Minimal Dark Landing Page</title>
+  <title>Julian Console</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="container">
-    <h1>Hello, I'm Julian 👋</h1>
-    <p>Welcome to my minimalist landing page.</p>
-    <a href="#contact" class="btn">Contact Me</a>
-  </main>
-
-  <footer id="contact">
-    <p>© 2025 Julian Schneider – Let's connect:</p>
-    <a href="mailto:you@example.com">you@example.com</a>
-  </footer>
-
+  <div class="terminal">
+    <div id="output"></div>
+    <div class="input-line">
+      <span class="prompt">julian@cv:~$</span>
+      <input type="text" id="commandInput" autofocus />
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

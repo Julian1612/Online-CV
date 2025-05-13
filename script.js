@@ -89,7 +89,7 @@ function initTerminal() {
     else {
         const response = commands[cmd] || `bash: ${cmd}: command not found
         Try 'help' for available commands.`;
-        output.innerHTML += `<div>${response}</div>`;
+        output.innerHTML += `<pre>${response}</pre>`;
     }
 
       input.value = "";

@@ -51,6 +51,33 @@ Frameworks & Tools:
 
 };
 
+function runRmRf(output) {
+  const steps = [
+    "[ WARNING ] Deleting system files...",
+    "[ OK ] /etc removed",
+    "[ OK ] /home wiped",
+    "[ OK ] /sanity not found",
+    "💀 System integrity: DESTROYED",
+    ".",
+    "..",
+    "...",
+    "Just kidding.",
+    "Relax, it's just a portfolio site – not your Linux box 😎"
+  ];
+
+  let i = 0;
+
+  function nextLine() {
+    if (i < steps.length) {
+      output.innerHTML += `<div>${steps[i]}</div>`;
+      i++;
+      setTimeout(nextLine, i < 5 ? 800 : 500); // längere Pause für Drama
+    }
+  }
+
+  nextLine();
+}
+
 function initTerminal() {
   const input = document.getElementById("commandInput");
   const output = document.getElementById("output");
@@ -60,13 +87,17 @@ function initTerminal() {
       const cmd = input.value.trim();
       output.innerHTML += `<div><span class="prompt">julian@cv:~$</span> ${cmd}</div>`;
 
-      if (cmd === "clear") {
+    if (cmd === "clear") {
         output.innerHTML = "";
-      } else {
+    } else if (cmd == "rm -rf /") {
+        runRmRf(output);
+        input.value = "";
+    }
+    else {
         const response = commands[cmd] || `bash: ${cmd}: command not found
-Try 'help' for available commands.`;
+        Try 'help' for available commands.`;
         output.innerHTML += `<div>${response}</div>`;
-      }
+    }
 
       input.value = "";
       output.scrollTop = output.scrollHeight;

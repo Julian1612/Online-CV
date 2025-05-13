@@ -1,31 +1,52 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --accent: #00ffc8;
+}
+
 body {
-  background: #00ffff;
-  color: #000080;
-  font-family: 'Comic Sans MS', cursive;
+  margin: 0;
+  padding: 2rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 600px;
+  margin: 5rem auto;
   text-align: center;
 }
 
-h1 {
-  font-size: 36px;
-  text-shadow: 2px 2px #ff00ff;
+.glow {
+  font-size: 2.5rem;
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent);
 }
 
-h2 {
-  color: #ff0000;
-  border-bottom: 2px dashed #000;
+button {
+  margin-top: 2rem;
+  background: none;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: var(--accent);
+  color: #000;
 }
 
-.marquee {
-  margin: 20px;
-  border: 3px dotted #ff9900;
-  background: #ffff00;
-  padding: 10px;
-}
-
-blink {
-  animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {
-  50% { opacity: 0; }
+.easter-egg {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--accent);
+  padding: 1rem;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
 }

@@ -1,11 +1,31 @@
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 2rem;
-  background: #f9f9f9;
-  color: #333;
+  background: #00ffff;
+  color: #000080;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
 }
 
-.section {
-  margin-bottom: 2rem;
+h1 {
+  font-size: 36px;
+  text-shadow: 2px 2px #ff00ff;
+}
+
+h2 {
+  color: #ff0000;
+  border-bottom: 2px dashed #000;
+}
+
+.marquee {
+  margin: 20px;
+  border: 3px dotted #ff9900;
+  background: #ffff00;
+  padding: 10px;
+}
+
+blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
 }

@@ -1,11 +1,11 @@
 body {
   font-family: sans-serif;
-  background: linear-gradient(120deg, #0077b6, #00b4d8);
-  color: white;
-  text-align: center;
-  padding: 50px;
+  margin: 0;
+  padding: 2rem;
+  background: #f9f9f9;
+  color: #333;
 }
-h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+
+.section {
+  margin-bottom: 2rem;
 }

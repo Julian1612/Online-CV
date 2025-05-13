@@ -2,26 +2,42 @@ const input = document.getElementById("commandInput");
 const output = document.getElementById("output");
 
 const commands = {
-  help: `Available commands:
-- about
-- skills
-- experience
-- clear`,
+  "help": `usage: [command]
 
-  about: `I'm Julian – a curious software developer with a background in mechatronics.
-I love clean code, dark UIs, and building things that actually solve problems.`,
+Available commands:
+  whoami            Show info about me
+  ls                List available sections
+  cat about.txt     Show biography
+  cat skills.txt    List skills
+  cat experience.txt Show work experience
+  clear             Clear the terminal`,
 
-  skills: `Languages: Python, C, C++, Bash, JavaScript
-Frameworks: Node.js, Vue.js, AWS
-Tools: Git, Docker, Linux, VS Code`,
+  "whoami": `julian.schneider
+Full-Stack Dev | Mechatronics background | Loves minimalism`,
 
-  experience: `Porsche – Digital Engineering Intern
-- Built Power Apps for internal tools
+  "ls": `about.txt  skills.txt  experience.txt`,
 
-MANN+HUMMEL – Prototyping Intern
-- Developed a hardware/software IoT solution from scratch`,
+  "cat about.txt": `Julian Schneider is a developer with a mechatronics background.
+He's worked on IoT prototypes, PowerApps, and cloud tools.`,
 
-  clear: ""
+  "cat skills.txt": `Languages:
+  - Python
+  - C / C++
+  - JavaScript
+  - Bash
+
+Frameworks & Tools:
+  - Node.js / Vue.js
+  - AWS / Docker / Git
+  - Linux / VS Code`,
+
+  "cat experience.txt": `2024 - Porsche
+  • Built internal MS PowerApps, supported digitalisation projects
+
+2023 - MANN+HUMMEL
+  • Developed IoT prototype incl. hardware and firmware`,
+
+  "clear": ""
 };
 
 input.addEventListener("keydown", function (e) {
@@ -32,8 +48,8 @@ input.addEventListener("keydown", function (e) {
     if (cmd === "clear") {
       output.innerHTML = "";
     } else {
-      const response = commands[cmd] || `Command not found: ${cmd}
-Type 'help' for list of commands.`;
+      const response = commands[cmd] || `bash: ${cmd}: command not found
+Try 'help' for available commands.`;
       output.innerHTML += `<div>${response}</div>`;
     }
 

@@ -2,44 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV – Julian Schneider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minimal Dark Landing Page</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="app">
-    <main>
-      <h1>{{ name }}</h1>
-      <h2>{{ title }}</h2>
-      <p>{{ summary }}</p>
+  <main class="container">
+    <h1>Hello, I'm Julian 👋</h1>
+    <p>Welcome to my minimalist landing page.</p>
+    <a href="#contact" class="btn">Contact Me</a>
+  </main>
 
-      <section>
-        <h3>Erfaaaahrung</h3>
-        <ul>
-          <li v-for="job in experience" :key="job.company">
-            <strong>{{ job.role }}</strong> @ {{ job.company }}<br />
-            <small>{{ job.period }}</small><br />
-            <em>{{ job.description }}</em>
-          </li>
-        </ul>
-      </section>
+  <footer id="contact">
+    <p>© 2025 Julian Schneider – Let's connect:</p>
+    <a href="mailto:you@example.com">you@example.com</a>
+  </footer>
 
-      <section>
-        <h3>Skills</h3>
-        <ul class="skills">
-          <li v-for="skill in skills" :key="skill">{{ skill }}</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Kontakt</h3>
-        <p>Email: {{ contact.email }}</p>
-        <p>LinkedIn: <a :href="contact.linkedin" target="_blank">{{ contact.linkedin }}</a></p>
-      </section>
-    </main>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

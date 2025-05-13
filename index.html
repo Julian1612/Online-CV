@@ -2,20 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Julian Schneider – Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV – Julian Schneider</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1 class="glow">Hi, ich bin Julian 👋</h1>
-    <p>Softwareentwickler mit Leidenschaft für sauberen Code, coole Tools und moderne UI.</p>
+  <div id="app">
+    <main>
+      <h1>{{ name }}</h1>
+      <h2>{{ title }}</h2>
+      <p>{{ summary }}</p>
 
-    <button id="mode-toggle">🌙 Dark Mode</button>
+      <section>
+        <h3>Erfahrung</h3>
+        <ul>
+          <li v-for="job in experience" :key="job.company">
+            <strong>{{ job.role }}</strong> @ {{ job.company }}<br />
+            <small>{{ job.period }}</small><br />
+            <em>{{ job.description }}</em>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Skills</h3>
+        <ul class="skills">
+          <li v-for="skill in skills" :key="skill">{{ skill }}</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Kontakt</h3>
+        <p>Email: {{ contact.email }}</p>
+        <p>LinkedIn: <a :href="contact.linkedin" target="_blank">{{ contact.linkedin }}</a></p>
+      </section>
+    </main>
   </div>
 
-  <div class="easter-egg" id="egg">👾 DU HAST DAS EASTER EGG GEFUNDEN!</div>
-
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <script src="app.js"></script>
 </body>
 </html>

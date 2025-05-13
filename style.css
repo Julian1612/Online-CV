@@ -1,52 +1,47 @@
-:root {
-  --bg: #ffffff;
-  --text: #000000;
-  --accent: #00ffc8;
-}
-
 body {
   margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #fdfdfd;
+  color: #333;
   padding: 2rem;
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Space Grotesk', sans-serif;
-  transition: all 0.3s ease;
 }
 
-.container {
-  max-width: 600px;
-  margin: 5rem auto;
-  text-align: center;
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
 }
 
-.glow {
+h1 {
   font-size: 2.5rem;
-  color: var(--accent);
-  text-shadow: 0 0 10px var(--accent);
+  margin-bottom: 0.2rem;
 }
 
-button {
+h2 {
+  font-weight: 400;
+  color: #666;
+  margin-top: 0;
+}
+
+h3 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
   margin-top: 2rem;
-  background: none;
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-button:hover {
-  background: var(--accent);
-  color: #000;
 }
 
-.easter-egg {
-  display: none;
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background: var(--accent);
-  padding: 1rem;
-  border-radius: 10px;
-  color: black;
-  font-weight: bold;
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills li {
+  background: #efefef;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  list-style: none;
+  font-size: 0.9rem;
 }

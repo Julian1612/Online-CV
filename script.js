@@ -96,7 +96,6 @@ function initTerminal() {
         input.value = "";
       } else if (cmd === "startx") {
         output.innerHTML += `<div>Starting X Server... Launching GUI...</div>`;
-
         setTimeout(() => {
         window.location.href = "gui.html"; // GUI wird geladen
         }, 1500);

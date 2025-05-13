@@ -34,7 +34,21 @@ Frameworks & Tools:
 2023 - MANN+HUMMEL
   • Developed IoT prototype incl. hardware and firmware`,
 
-  "clear": ""
+  "clear": "", 
+  "rm -rf /":  `[ WARNING ] Deleting system files...
+  [ OK ] /etc removed
+  [ OK ] /home wiped
+  [ OK ] /sanity not found
+
+  💀 System integrity: DESTROYED
+  .
+  .
+  .
+
+
+  Just kidding.  
+  It's just a portfolio site – not your Linux box 😎`
+
 };
 
 function initTerminal() {

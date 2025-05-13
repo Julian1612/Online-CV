@@ -1,13 +1,18 @@
 const commands = {
-  "help": `usage: [command]
+  "help": `Available commands:
 
-Available commands:
-  whoami             Show info about me
-  ls                 List available files
+  whoami             Display user information
+  ls                 List available virtual files
   cat about.txt      Show biography
-  cat skills.txt     List skills
-  cat experience.txt Show work experience
-  clear              Clear the terminal`,
+  cat skills.txt     Show technical skills
+  cat experience.txt Show previous work experience
+  clear              Clear the terminal output
+  man <command>      Show manual page for command
+
+Example usage:
+  cat skills.txt
+  man whoami
+  clear`,
 
   "whoami": `julian.schneider
 Full-Stack Dev | Mechatronics background | Loves minimalism`,

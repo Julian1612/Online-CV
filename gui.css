@@ -49,6 +49,8 @@ body {
   left: 100px;
   top: 100px;
   max-height: 300px;
+  display: none;
+  position: fixed;
 }
 
 

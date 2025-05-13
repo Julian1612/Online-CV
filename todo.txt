@@ -1,0 +1,8 @@
+refactore code
+command cd hinzufügen und die directorys Desktop documents Downloads Library Pictures
+
+about me fullen 
+ein lebenslauf pdf auf den desktop 
+in der taskleiste noch  ein internet browser für github, linkedin und mail
+noch ein mini game
+noch ein 

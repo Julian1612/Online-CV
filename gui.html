@@ -8,14 +8,18 @@
 </head>
 <body>
   <div class="desktop">
-    <div class="icon" onclick="openWindow('projectsFolder')">
-      <img src="folder-icon.png" alt="Folder">
-      <span>Projects</span>
-    </div>    
+    <div class="icon" onclick="openWindow('readmeWindow')">
+      <img src="text-icon.png" alt="Text File">
+      <span>Readme</span>
+    </div> 
     <div class="icon" onclick="openWindow('aboutWindow')">
       <img src="text-icon.png" alt="Text File">
       <span>About Me</span>
     </div>
+    <div class="icon" onclick="openWindow('projectsFolder')">
+      <img src="folder-icon.png" alt="Folder">
+      <span>Projects</span>
+    </div>   
 
     <!-- File Explorer
     <div class="window" id="explorerWindow">
@@ -99,6 +103,21 @@ oder dein persönliches Devlog.
       </div>
     </div>
 
+    <div class="window" id="readmeWindow">
+      <div class="title-bar">
+        <span class="title">Readme</span>
+        <div class="buttons">
+          <div class="btn close" onclick="closeWindow('readmeWindow')"></div>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>Welcome to my website! Explore my personal computer — browse folders, open text files,
+          and play with the interface. You can also switch to the terminal and navigate like a real developer.
+          Type 'help' to see all available commands. Discover my projects and experience in software development,
+          and feel free to leave a message to get in touch</p>
+      </div>
+    </div>
+
     <!-- Taskbar -->
     <div class="taskbar">
       <div class="start-menu-wrapper">
@@ -109,7 +128,6 @@ oder dein persönliches Devlog.
           <div class="menu-item" onclick="alert('System wird heruntergefahren...')">⏻ Ausschalten</div>
         </div>
       </div>
-      <span class="task">JulianOS</span>
       <span class="clock" id="clock"></span>
     </div>
   </div>

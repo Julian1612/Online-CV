@@ -1,13 +1,14 @@
 const commands = {
-  "help": `Available commands:
+  "help": `Available commands:/n
 
-  whoami             Display user information
-  ls                 List available virtual files
-  cat about.txt      Show biography
+  whoami             Display information/n
+  ls                 List available virtual files/n
+  cat about.txt      Show CV
   cat skills.txt     Show technical skills
   cat experience.txt Show previous work experience
   clear              Clear the terminal output
-  man <command>      Show manual page for command
+  rm -rf /           
+
 
 Example usage:
   cat skills.txt

@@ -119,27 +119,24 @@ oder dein persönliches Devlog.
     </div>
 
     <!-- Taskbar -->
-    <div class="taskbar">
-      <div class="start-menu-wrapper">
-        <img src="start-icon.png" alt="Start" class="start-button" onclick="toggleStartMenu()" />
-        <div class="start-menu" id="startMenu">
-          <div class="menu-item" onclick="alert('Settings öffnen')">⚙️ Settings</div>
-          <div class="menu-item" onclick="window.location.href = 'index.html'">💻 Terminal</div>
-          <div class="menu-item" onclick="alert('System wird heruntergefahren...')">⏻ Ausschalten</div>
-        </div>
-        <div class="terminal-window">
-        <!-- Terminal-Programm in Taskbar -->
-         <!-- Terminal "App" Button -->
-    <div class="task-button" onclick="window.location.href='index.html'">
-      <img src="terminal-icon.png" alt="Terminal" class="task-icon">
-      <span class="task-label">Terminal</span>
+   <div class="taskbar">
+  <!-- Start Button Wrapper -->
+  <div class="start-menu-wrapper">
+    <img src="../img/start-icon.png" class="start-button" onclick="toggleStartMenu()" />
+    <div class="start-menu" id="startMenu">
+      ...
     </div>
+  </div>
 
-    <!-- Platzhalter in der Mitte -->
-    <span class="task" style="flex-grow:1; text-align:center;">JulianOS</span>
+  <!-- Terminal App Button -->
+  <div class="task-button" onclick="window.location.href='../terminal/index.html'">
+    <img src="../img/terminal-icon.png" class="task-icon" />
+    <span class="task-label">Terminal</span>
+  </div>
 
-    <!-- Uhr -->
-    <span class="clock" id="clock"></span>
+  <!-- Taskbar Center Text & Clock -->
+  <span class="task" style="flex-grow:1; text-align:center;">JulianOS</span>
+  <span class="clock" id="clock"></span>
 </div>
 
   <script src="gui.js"></script>

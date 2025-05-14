@@ -118,8 +118,17 @@ body {
   padding-right: 40px;
 }
 
+.start-menu {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+}
+
+
 .start-menu-wrapper {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .start-button {

@@ -1,3 +1,4 @@
+<!-- desktop.html -->
 <div class="desktop">
   <!-- Icons -->
   <div class="icon" onclick="openWindow('projectsFolder')">
@@ -111,6 +112,19 @@
     </div>
   </div>
 
+  <!-- Internet Browser Window -->
+  <div class="window" id="internetWindow">
+    <div class="title-bar">
+      <span class="title">Internet</span>
+      <div class="buttons">
+        <div class="btn close" onclick="closeWindow('internetWindow')"></div>
+      </div>
+    </div>
+    <div class="window-body">
+      <!-- initially empty -->
+    </div>
+  </div>
+
   <!-- Taskbar -->
   <div class="taskbar">
     <div class="start-menu-wrapper">
@@ -121,7 +135,21 @@
         <div class="menu-item" onclick="alert('System wird heruntergefahren.')">⏻ Ausschalten</div>
       </div>
     </div>
-    <span class="task">JulianOS</span>
+
+    <!-- Internet Tab -->
+    <div class="task-button" onclick="openWindow('internetWindow')">
+      <img src="img/internet.png" alt="Internet" class="task-icon">
+      <span class="task-label">Internet</span>
+    </div>
+
+    <!-- Terminal Tab -->
+    <div class="task-button" onclick="openTerminal()">
+      <img src="img/terminal-icon.png" alt="Terminal" class="task-icon">
+      <span class="task-label">Terminal</span>
+    </div>
+
+    <!-- Spacer + Clock -->
+    <span class="task" style="flex-grow: 1;"></span>
     <span class="clock" id="clock"></span>
   </div>
 </div>

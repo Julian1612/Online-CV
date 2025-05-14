@@ -31,7 +31,7 @@ body {
 }
 
 .window {
-  width: 50vw; /* 2/4 Breite */
+  width: 50vw; /* Window width: half of viewport */
   height: auto;
   max-height: 60vh;
   background-color: #c0c0c0;
@@ -39,7 +39,7 @@ body {
   box-shadow: 2px 2px #000;
   position: fixed;
   top: 20%;
-  left: 25%;  /* 1/4 Abstand links */
+  left: 25%;
   display: none;
   z-index: 10;
 }
@@ -49,10 +49,7 @@ body {
   left: 100px;
   top: 100px;
   max-height: 300px;
-  display: none;
-  position: fixed;
 }
-
 
 .title-bar {
   background: linear-gradient(to right, #000080, #0000cd);
@@ -98,13 +95,13 @@ body {
   background: #c0c0c0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 20px 2px 20px;
   box-shadow: inset 0 1px #fff, inset 0 -1px #808080;
   font-size: 16px;
   z-index: 1000;
-  gap: 10px;
+  gap: 15px;
 }
-
 
 .start-button,
 .task,
@@ -118,32 +115,9 @@ body {
   padding-right: 40px;
 }
 
-.start-menu {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-}
-
-
 .start-menu-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
 }
-
-.start-button {
-  height: 100%;               /* exakt so hoch wie Taskbar */
-  width: auto;                /* Breite passt sich an */
-  max-height: 40px;           /* Begrenzung für zu große Icons */
-  aspect-ratio: 1 / 1;        /* quadratisch */
-  cursor: pointer;
-  border: 2px outset #fff;
-  background: #d4d0c8;
-  padding: 0px;
-  box-sizing: border-box;
-  image-rendering: pixelated; /* Retro-Grafik klarer */
-}
-
 
 .start-menu {
   position: absolute;
@@ -190,30 +164,42 @@ body {
   border: 1px inset #999;
 }
 
-.task-button {
+/* Terminal window styles */
+#terminalWindow .window-body {
+  background: #000;
+  color: #33ff33;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+}
+
+#terminalWindow #output {
+  max-height: 50vh;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+#terminalWindow #welcome {
+  font-style: italic;
+  white-space: pre-wrap;
+  margin-bottom: 1rem;
+}
+
+#terminalWindow .input-line {
   display: flex;
   align-items: center;
-  background: #d4d0c8;
-  border: 2px outset #fff;
-  padding: 2px 8px;
-  margin-left: 10px;
-  cursor: pointer;
-  height: 70%; /* passt in die Taskbar-Höhe */
-  box-sizing: border-box;
+  margin-top: 0.5rem;
 }
 
-.task-button:hover {
-  background-color: #c0c0c0;
+#terminalWindow .prompt {
+  margin-right: 0.5rem;
 }
 
-.task-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 20px;
-  image-rendering: pixelated;
-}
-
-.task-label {
-  font-size: 14px;
-  font-family: 'MS Sans Serif', sans-serif;
+#terminalWindow input[type="text"] {
+  background: none;
+  border: none;
+  outline: none;
+  color: #33ff33;
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
 }

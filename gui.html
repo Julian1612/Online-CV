@@ -5,24 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JulianOS Desktop</title>
   <link rel="stylesheet" href="gui.css" />
-  <link rel="stylesheet" href="style.css" /> <!-- Terminal-Styling -->
 </head>
 <body>
   <div class="desktop">
-
-    <!-- Desktop Icons -->
-    <div class="icon" onclick="openWindow('readmeWindow')">
-      <img src="text-icon.png" alt="Text File">
-      <span>Readme</span>
-    </div> 
+    <div class="icon" onclick="openWindow('projectsFolder')">
+      <img src="folder-icon.png" alt="Folder">
+      <span>Projects</span>
+    </div>
     <div class="icon" onclick="openWindow('aboutWindow')">
       <img src="text-icon.png" alt="Text File">
       <span>About Me</span>
     </div>
-    <div class="icon" onclick="openWindow('projectsFolder')">
-      <img src="folder-icon.png" alt="Folder">
-      <span>Projects</span>
-    </div>   
 
     <!-- Projects Folder -->
     <div class="window small" id="projectsFolder">
@@ -40,7 +33,7 @@
       </div>
     </div>
 
-    <!-- Text Files -->
+    <!-- Text File 1 -->
     <div class="window" id="file1">
       <div class="title-bar">
         <span class="title">project1.txt</span>
@@ -50,13 +43,14 @@
       </div>
       <div class="window-body scrollable">
         <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Curabitur a justo nec felis sagittis facilisis.
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Curabitur a justo nec felis sagittis facilisis. 
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
       </div>
     </div>
 
+    <!-- Text File 2 -->
     <div class="window" id="file2">
       <div class="title-bar">
         <span class="title">project2.txt</span>
@@ -66,10 +60,9 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
       </div>
       <div class="window-body scrollable">
         <p>
-Dies ist der Inhalt von project2.txt.
-
-Hier könnte z. B. eine Projektbeschreibung stehen
-oder dein persönliches Devlog.
+          Dies ist der Inhalt von project2.txt.  
+          Hier könnte z. B. eine Projektbeschreibung stehen  
+          oder dein persönliches Devlog.
         </p>
       </div>
     </div>
@@ -87,22 +80,6 @@ oder dein persönliches Devlog.
       </div>
     </div>
 
-    <!-- Readme -->
-    <div class="window" id="readmeWindow">
-      <div class="title-bar">
-        <span class="title">Readme</span>
-        <div class="buttons">
-          <div class="btn close" onclick="closeWindow('readmeWindow')"></div>
-        </div>
-      </div>
-      <div class="window-body">
-        <p>Welcome to my website! Explore my personal computer — browse folders, open text files,
-          and play with the interface. You can also switch to the terminal and navigate like a real developer.
-          Type 'help' to see all available commands. Discover my projects and experience in software development,
-          and feel free to leave a message to get in touch 😎</p>
-      </div>
-    </div>
-
     <!-- Terminal Window -->
     <div class="window" id="terminalWindow">
       <div class="title-bar">
@@ -111,49 +88,30 @@ oder dein persönliches Devlog.
           <div class="btn close" onclick="closeWindow('terminalWindow')"></div>
         </div>
       </div>
-      <div class="window-body terminal">
-        <div id="welcome"></div>
-        <div class="input-block" style="display: none;">
-          <div id="output"></div>
-          <div class="input-line">
-            <span class="prompt">julian@cv:~$</span>
-            <input type="text" id="commandInput" />
-          </div>
+      <div class="window-body">
+        <div id="output"><span id="welcome"></span></div>
+        <div class="input-line" style="display: none;">
+          <span class="prompt">julian@cv:~$</span>
+          <input type="text" id="commandInput" />
         </div>
       </div>
     </div>
 
     <!-- Taskbar -->
     <div class="taskbar">
-      <!-- Start Button -->
       <div class="start-menu-wrapper">
         <img src="start-icon.png" alt="Start" class="start-button" onclick="toggleStartMenu()" />
         <div class="start-menu" id="startMenu">
           <div class="menu-item" onclick="alert('Settings öffnen')">⚙️ Settings</div>
-          <div class="menu-item" onclick="openWindow('terminalWindow'); initTerminal();">💻 Terminal</div>
-          <div class="menu-item" onclick="alert('System wird heruntergefahren...')">⏻ Ausschalten</div>
+          <div class="menu-item" onclick="openTerminal()">💻 Terminal</div>
+          <div class="menu-item" onclick="alert('System wird heruntergefahren.')">⏻ Ausschalten</div>
         </div>
       </div>
-
-      <!-- Terminal Button -->
-      <div class="task-button" onclick="openWindow('terminalWindow'); initTerminal();">
-        <img src="terminal-icon.png" alt="Terminal" class="task-icon">
-        <span class="task-label">Terminal</span>
-      </div>
-
-      <!-- Internet Button -->
-      <div class="task-button" onclick="alert('Browser nicht verfügbar 😅')">
-        <img src="internet.png" alt="Internet" class="task-icon">
-        <span class="task-label">Internet</span>
-      </div>
-
-      <!-- Spacer + Clock -->
-      <span class="task" style="flex-grow: 1;"></span>
+      <span class="task">JulianOS</span>
       <span class="clock" id="clock"></span>
     </div>
   </div>
-
+  <script src="script.js"></script>
   <script src="gui.js"></script>
-  <script src="script.js"></script> <!-- Terminal Logik -->
 </body>
 </html>

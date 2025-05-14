@@ -1,4 +1,3 @@
-<!-- desktop.html -->
 <div class="desktop">
   <!-- Icons -->
   <div class="icon" onclick="openWindow('projectsFolder')">
@@ -102,9 +101,7 @@
       </div>
     </div>
     <div class="window-body">
-      <div id="output">
-        <span id="welcome"></span>
-      </div>
+      <div id="output"><span id="welcome"></span></div>
       <div class="input-line" style="display:none;">
         <span class="prompt">julian@cv:~$</span>
         <input type="text" id="commandInput" />
@@ -121,7 +118,7 @@
       </div>
     </div>
     <div class="window-body">
-      <!-- initially empty -->
+      <!-- Erstmal leer – hier kannst du später z.B. ein iframe einbauen -->
     </div>
   </div>
 
@@ -136,19 +133,19 @@
       </div>
     </div>
 
-    <!-- Internet Tab -->
+    <!-- Internet-Tab -->
     <div class="task-button" onclick="openWindow('internetWindow')">
       <img src="img/internet.png" alt="Internet" class="task-icon">
       <span class="task-label">Internet</span>
     </div>
 
-    <!-- Terminal Tab -->
+    <!-- Terminal-Tab -->
     <div class="task-button" onclick="openTerminal()">
       <img src="img/terminal-icon.png" alt="Terminal" class="task-icon">
       <span class="task-label">Terminal</span>
     </div>
 
-    <!-- Spacer + Clock -->
+    <!-- Leerraum + Uhr -->
     <span class="task" style="flex-grow: 1;"></span>
     <span class="clock" id="clock"></span>
   </div>

@@ -8,6 +8,8 @@
 </head>
 <body>
   <div class="desktop">
+
+    <!-- Desktop Icons -->
     <div class="icon" onclick="openWindow('readmeWindow')">
       <img src="text-icon.png" alt="Text File">
       <span>Readme</span>
@@ -20,23 +22,6 @@
       <img src="folder-icon.png" alt="Folder">
       <span>Projects</span>
     </div>   
-
-    <!-- File Explorer
-    <div class="window" id="explorerWindow">
-      <div class="title-bar">
-        <span class="title">File Explorer</span>
-        <div class="buttons">
-          <div class="btn close" onclick="closeWindow('explorerWindow')"></div>
-        </div>
-      </div>
-      <div class="window-body">
-        <ul class="file-list">
-          <li>📄 resume.pdf</li>
-          <li class="clickable" onclick="openWindow('projectsFolder')">📂 projects</li>
-          <li>🖼️ portfolio.png</li>
-        </ul>
-      </div>
-    </div> -->
 
     <!-- Projects Folder -->
     <div class="window small" id="projectsFolder">
@@ -53,9 +38,8 @@
         </ul>
       </div>
     </div>
-    
 
-    <!-- Text File 1 -->
+    <!-- Text Files -->
     <div class="window" id="file1">
       <div class="title-bar">
         <span class="title">project1.txt</span>
@@ -72,7 +56,6 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
       </div>
     </div>
 
-    <!-- Text File 2 -->
     <div class="window" id="file2">
       <div class="title-bar">
         <span class="title">project2.txt</span>
@@ -103,6 +86,7 @@ oder dein persönliches Devlog.
       </div>
     </div>
 
+    <!-- Readme -->
     <div class="window" id="readmeWindow">
       <div class="title-bar">
         <span class="title">Readme</span>
@@ -114,30 +98,33 @@ oder dein persönliches Devlog.
         <p>Welcome to my website! Explore my personal computer — browse folders, open text files,
           and play with the interface. You can also switch to the terminal and navigate like a real developer.
           Type 'help' to see all available commands. Discover my projects and experience in software development,
-          and feel free to leave a message to get in touch</p>
+          and feel free to leave a message to get in touch 😎</p>
       </div>
     </div>
 
     <!-- Taskbar -->
-   <div class="taskbar">
-  <!-- Start Button Wrapper -->
-  <div class="start-menu-wrapper">
-    <img src="../img/start-icon.png" class="start-button" onclick="toggleStartMenu()" />
-    <div class="start-menu" id="startMenu">
-      ...
+    <div class="taskbar">
+      <!-- Start Button -->
+      <div class="start-menu-wrapper">
+        <img src="start-icon.png" alt="Start" class="start-button" onclick="toggleStartMenu()" />
+        <div class="start-menu" id="startMenu">
+          <div class="menu-item" onclick="alert('Settings öffnen')">⚙️ Settings</div>
+          <div class="menu-item" onclick="window.location.href = 'index.html'">💻 Terminal</div>
+          <div class="menu-item" onclick="alert('System wird heruntergefahren...')">⏻ Ausschalten</div>
+        </div>
+      </div>
+
+      <!-- Terminal Program Button -->
+      <div class="task-button" onclick="window.location.href='index.html'">
+        <img src="terminal-icon.png" alt="Terminal" class="task-icon">
+        <span class="task-label">Terminal</span>
+      </div>
+
+      <!-- Spacer + Clock -->
+      <span class="task" style="flex-grow: 1;"></span>
+      <span class="clock" id="clock"></span>
     </div>
   </div>
-
-  <!-- Terminal App Button -->
-  <div class="task-button" onclick="window.location.href='../terminal/index.html'">
-    <img src="../img/terminal-icon.png" class="task-icon" />
-    <span class="task-label">Terminal</span>
-  </div>
-
-  <!-- Taskbar Center Text & Clock -->
-  <span class="task" style="flex-grow:1; text-align:center;">JulianOS</span>
-  <span class="clock" id="clock"></span>
-</div>
 
   <script src="gui.js"></script>
 </body>

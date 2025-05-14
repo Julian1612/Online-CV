@@ -51,8 +51,6 @@ document.getElementById("terminalWindow").addEventListener("click", function () 
   }
 });
 
-<script src="script.js"></script>
-
 
 
 setInterval(updateClock, 1000);

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JulianOS Desktop</title>
   <link rel="stylesheet" href="gui.css" />
+  <link rel="stylesheet" href="style.css" /> <!-- Terminal-Styling -->
 </head>
 <body>
   <div class="desktop">
@@ -102,6 +103,26 @@ oder dein persönliches Devlog.
       </div>
     </div>
 
+    <!-- Terminal Window -->
+    <div class="window" id="terminalWindow">
+      <div class="title-bar">
+        <span class="title">Terminal</span>
+        <div class="buttons">
+          <div class="btn close" onclick="closeWindow('terminalWindow')"></div>
+        </div>
+      </div>
+      <div class="window-body terminal">
+        <div id="welcome"></div>
+        <div class="input-block" style="display: none;">
+          <div id="output"></div>
+          <div class="input-line">
+            <span class="prompt">julian@cv:~$</span>
+            <input type="text" id="commandInput" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Taskbar -->
     <div class="taskbar">
       <!-- Start Button -->
@@ -109,20 +130,20 @@ oder dein persönliches Devlog.
         <img src="start-icon.png" alt="Start" class="start-button" onclick="toggleStartMenu()" />
         <div class="start-menu" id="startMenu">
           <div class="menu-item" onclick="alert('Settings öffnen')">⚙️ Settings</div>
-          <div class="menu-item" onclick="window.location.href = 'index.html'">💻 Terminal</div>
+          <div class="menu-item" onclick="openWindow('terminalWindow'); initTerminal();">💻 Terminal</div>
           <div class="menu-item" onclick="alert('System wird heruntergefahren...')">⏻ Ausschalten</div>
         </div>
       </div>
 
-      <!-- Terminal Program Button -->
-      <div class="task-button" onclick="window.location.href='index.html'">
+      <!-- Terminal Button -->
+      <div class="task-button" onclick="openWindow('terminalWindow'); initTerminal();">
         <img src="terminal-icon.png" alt="Terminal" class="task-icon">
         <span class="task-label">Terminal</span>
       </div>
 
-      <!-- Internet Program Button-->
-      <div class="task-button" onclick="window.location.href='index.html'">
-        <img src="internet.png" alt="Terminal" class="task-icon">
+      <!-- Internet Button -->
+      <div class="task-button" onclick="alert('Browser nicht verfügbar 😅')">
+        <img src="internet.png" alt="Internet" class="task-icon">
         <span class="task-label">Internet</span>
       </div>
 
@@ -133,5 +154,6 @@ oder dein persönliches Devlog.
   </div>
 
   <script src="gui.js"></script>
+  <script src="script.js"></script> <!-- Terminal Logik -->
 </body>
 </html>

@@ -42,6 +42,17 @@ function closeAllTextFiles() {
   });
 }
 
+document.getElementById("terminalWindow").addEventListener("click", function () {
+  if (!window.terminalInitialized) {
+    window.terminalInitialized = true;
+    setTimeout(() => {
+      typeWelcome(); // kommt aus script.js
+    }, 100);
+  }
+});
+
+<script src="script.js"></script>
+
 
 
 setInterval(updateClock, 1000);

@@ -117,8 +117,21 @@
         <div class="btn close" onclick="closeWindow('internetWindow')"></div>
       </div>
     </div>
-    <div class="window-body">
-      <!-- Erstmal leer – hier kannst du später z.B. ein iframe einbauen -->
+    <div class="window-body browser-ui">
+      <!-- Tab-Leiste -->
+      <div class="browser-tabs">
+        <div class="tab active" onclick="openTab('linkedin', this)">LinkedIn</div>
+        <div class="tab"       onclick="openTab('github',   this)">GitHub</div>
+      </div>
+      <!-- Content-Bereiche -->
+      <div class="browser-content" id="linkedin">
+        <!-- Hier könnte ein <iframe> auf LinkedIn eingebettet werden -->
+        <p style="padding:10px;">LinkedIn–Inhalt (leer)</p>
+      </div>
+      <div class="browser-content" id="github" style="display:none;">
+        <!-- Hier könnte ein <iframe> auf GitHub eingebettet werden -->
+        <p style="padding:10px;">GitHub–Inhalt (leer)</p>
+      </div>
     </div>
   </div>
 

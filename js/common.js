@@ -63,3 +63,15 @@ function openTerminal() {
     document.getElementById('commandInput').focus();
   }
 }
+
+function openTab(tabId, el) {
+  // alle Contents verstecken
+  document.querySelectorAll('#internetWindow .browser-content')
+    .forEach(c => c.style.display = 'none');
+  // alle Tabs deaktivieren
+  document.querySelectorAll('#internetWindow .tab')
+    .forEach(t => t.classList.remove('active'));
+  // gewählten Content zeigen und Tab aktiv setzen
+  document.getElementById(tabId).style.display = 'block';
+  el.classList.add('active');
+}

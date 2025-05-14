@@ -184,3 +184,35 @@ body {
   font-size: 14px;
   font-family: 'MS Sans Serif', sans-serif;
 }
+
+/* 90s-Browser-Style im Internet-Window */
+#internetWindow .browser-ui {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 30px); /* abzüglich Title-Bar */
+}
+#internetWindow .browser-tabs {
+  display: flex;
+  background: #ddd;
+  border-bottom: 1px solid #aaa;
+}
+#internetWindow .tab {
+  padding: 4px 10px;
+  margin-right: 2px;
+  background: #eee;
+  border: 1px solid #aaa;
+  border-bottom: none;
+  cursor: pointer;
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 14px;
+}
+#internetWindow .tab.active {
+  background: #fff;
+  font-weight: bold;
+}
+#internetWindow .browser-content {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #aaa;
+  overflow: auto;
+}

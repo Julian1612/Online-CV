@@ -1,0 +1,106 @@
+/* --- Grundlayout --- */
+body {
+  margin: 0;
+  background-color: #008080;
+  font-family: 'MS Sans Serif', sans-serif;
+  overflow: hidden;
+}
+.desktop {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.icon {
+  width: 70px;
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+}
+.icon img { width: 32px; height: 32px; }
+
+/* --- Fenster --- */
+.window {
+  width: 50vw;
+  max-height: 60vh;
+  background: #c0c0c0;
+  border: 2px solid #000;
+  box-shadow: 2px 2px #000;
+  position: fixed; top: 20%; left: 25%;
+  display: none; z-index: 10;
+}
+.window.small {
+  width: 300px; left: 100px; top: 100px; max-height: 300px;
+}
+.title-bar {
+  background: linear-gradient(to right, #000080, #0000cd);
+  color: #fff; padding: 3px 8px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-weight: bold;
+}
+.title-bar .buttons { display: flex; gap: 4px; }
+.btn.close {
+  width:12px; height:12px; background:red; border:1px solid #000;
+  cursor: pointer;
+}
+.window-body {
+  background: #e0e0e0; padding: 10px; font-size: 14px;
+}
+.file-list {
+  list-style:none; margin:0; padding:0;
+}
+.file-list a {
+  color:black; text-decoration:none; cursor:pointer;
+}
+.file-list a:hover {
+  background:#d0d0d0; display:inline-block; padding:2px 4px;
+}
+.scrollable { max-height:200px; overflow-y:auto; }
+
+/* --- Taskbar --- */
+.taskbar {
+  position: fixed; bottom: 0; left: 0;
+  width:100%; height:55px; background:#c0c0c0;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 20px 2px; box-shadow: inset 0 1px #fff, inset 0 -1px #808080;
+  font-size:16px; z-index:1000; gap:15px;
+}
+.start-menu-wrapper { position: relative; }
+.start-button {
+  height:100%; aspect-ratio:1/1; max-height:40px;
+  cursor:pointer; border:2px outset #fff; background:#d4d0c8;
+  image-rendering:pixelated;
+}
+.start-menu {
+  position:absolute; bottom:35px; left:0;
+  width:140px; background:#f0f0f0; border:2px solid #000;
+  display:none; flex-direction:column; box-shadow:2px 2px #888; z-index:999;
+}
+.menu-item { padding:6px 10px; cursor:pointer; }
+.menu-item:hover { background:#c0c0c0; }
+.task { flex-grow:1; text-align:center; }
+.clock { padding-right:40px; }
+
+/* --- Terminal-Fenster speziell --- */
+#terminalWindow .window-body {
+  background:#000; color:#33ff33;
+  font-family:'Courier New', monospace; font-size:16px;
+}
+#terminalWindow #output {
+  max-height:50vh; overflow-y:auto; white-space:pre-wrap;
+  padding:10px;
+}
+#terminalWindow #welcome { font-style:italic; margin-bottom:1rem; }
+#terminalWindow .input-line {
+  display:flex; align-items:center; margin-top:0.5rem;
+}
+#terminalWindow .prompt { margin-right:0.5rem; }
+#terminalWindow input[type="text"] {
+  background:none; border:none; outline:none;
+  color:#33ff33; font-family:inherit; font-size:inherit;
+  width:100%;
+}

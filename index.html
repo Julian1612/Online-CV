@@ -3,21 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Julian Console</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>JulianOS</title>
+  <link rel="stylesheet" href="css/gui.css" />
 </head>
 <body>
-  <div class="terminal">
-    <div id="welcome"></div>
+  <div id="desktop-root"></div>
 
-    <div class="input-block" style="display: none;">
-      <div id="output"></div>
-      <div class="input-line">
-        <span class="prompt">julian@cv:~$</span>
-        <input type="text" id="commandInput" autofocus />
-      </div>
-    </div>
-  </div>
-  <script src="script.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/terminal.js"></script>
+  <script>
+    // Desktop nachladen und initialisieren
+    loadDesktop();
+  </script>
 </body>
 </html>

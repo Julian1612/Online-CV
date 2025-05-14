@@ -1,0 +1,127 @@
+<div class="desktop">
+  <!-- Icons -->
+  <div class="icon" onclick="openWindow('projectsFolder')">
+    <img src="img/folder-icon.png" alt="Folder"><span>Projects</span>
+  </div>
+  <div class="icon" onclick="openWindow('aboutWindow')">
+    <img src="img/text-icon.png" alt="Text"><span>About Me</span>
+  </div>
+  <div class="icon" onclick="openWindow('readmeWindow')">
+    <img src="img/text-icon.png" alt="Text"><span>Readme</span>
+  </div>
+
+  <!-- Projects Folder Window -->
+  <div class="window small" id="projectsFolder">
+    <div class="title-bar">
+      <span class="title">projects</span>
+      <div class="buttons">
+        <div class="btn close" onclick="closeWindow('projectsFolder')"></div>
+      </div>
+    </div>
+    <div class="window-body">
+      <ul class="file-list">
+        <li><a href="#" onclick="openTxtFile('file1')">📝 project1.txt</a></li>
+        <li><a href="#" onclick="openTxtFile('file2')">📝 project2.txt</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Text File 1 -->
+  <div class="window" id="file1">
+    <div class="title-bar">
+      <span class="title">project1.txt</span>
+      <div class="buttons">
+        <div class="btn close" onclick="closeWindow('file1')"></div>
+      </div>
+    </div>
+    <div class="window-body scrollable">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Curabitur a justo nec felis sagittis facilisis.
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      </p>
+    </div>
+  </div>
+
+  <!-- Text File 2 -->
+  <div class="window" id="file2">
+    <div class="title-bar">
+      <span class="title">project2.txt</span>
+      <div class="buttons">
+        <div class="btn close" onclick="closeWindow('file2')"></div>
+      </div>
+    </div>
+    <div class="window-body scrollable">
+      <p>
+        Dies ist der Inhalt von project2.txt.
+
+        Hier könnte z. B. eine Projektbeschreibung stehen
+        oder dein persönliches Devlog.
+      </p>
+    </div>
+  </div>
+
+  <!-- About Me -->
+  <div class="window" id="aboutWindow">
+    <div class="title-bar">
+      <span class="title">About Me</span>
+      <div class="buttons">
+        <div class="btn close" onclick="closeWindow('aboutWindow')"></div>
+      </div>
+    </div>
+    <div class="window-body">
+      <p>Hi, I'm Julian – a curious developer who loves minimalism, tech, and retro vibes 😎</p>
+    </div>
+  </div>
+
+  <!-- Readme -->
+  <div class="window" id="readmeWindow">
+    <div class="title-bar">
+      <span class="title">Readme</span>
+      <div class="buttons">
+        <div class="btn close" onclick="closeWindow('readmeWindow')"></div>
+      </div>
+    </div>
+    <div class="window-body">
+      <p>
+        Welcome to my website! Explore my personal computer — browse folders, open text files,
+        and play with the interface. You can also switch to the terminal and navigate like a real developer.
+        Type 'help' to see all available commands. Discover my projects and experience in software development,
+        and feel free to leave a message to get in touch 😎
+      </p>
+    </div>
+  </div>
+
+  <!-- Terminal Window -->
+  <div class="window" id="terminalWindow">
+    <div class="title-bar">
+      <span class="title">Terminal</span>
+      <div class="buttons">
+        <div class="btn close" onclick="closeWindow('terminalWindow')"></div>
+      </div>
+    </div>
+    <div class="window-body">
+      <div id="output">
+        <span id="welcome"></span>
+      </div>
+      <div class="input-line" style="display:none;">
+        <span class="prompt">julian@cv:~$</span>
+        <input type="text" id="commandInput" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Taskbar -->
+  <div class="taskbar">
+    <div class="start-menu-wrapper">
+      <img src="img/start-icon.png" alt="Start" class="start-button" onclick="toggleStartMenu()" />
+      <div class="start-menu" id="startMenu">
+        <div class="menu-item" onclick="alert('Settings öffnen')">⚙️ Settings</div>
+        <div class="menu-item" onclick="openTerminal()">💻 Terminal</div>
+        <div class="menu-item" onclick="alert('System wird heruntergefahren.')">⏻ Ausschalten</div>
+      </div>
+    </div>
+    <span class="task">JulianOS</span>
+    <span class="clock" id="clock"></span>
+  </div>
+</div>

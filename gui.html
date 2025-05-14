@@ -129,13 +129,18 @@ oder dein persönliches Devlog.
         </div>
         <div class="terminal-window">
         <!-- Terminal-Programm in Taskbar -->
-        <div class="task-button" onclick="window.location.href='../terminal/index.html'">
-          <img src="terminal-icon.png" alt="Terminal" class="task-icon">
-          <span class="task-label">Terminal</span>
-        </div>
-      <span class="clock" id="clock"></span>
+         <!-- Terminal "App" Button -->
+    <div class="task-button" onclick="window.location.href='../terminal/index.html'">
+      <img src="../img/terminal-icon.png" alt="Terminal" class="task-icon">
+      <span class="task-label">Terminal</span>
     </div>
-  </div>
+
+    <!-- Platzhalter in der Mitte -->
+    <span class="task" style="flex-grow:1; text-align:center;">JulianOS</span>
+
+    <!-- Uhr -->
+    <span class="clock" id="clock"></span>
+</div>
 
   <script src="gui.js"></script>
 </body>

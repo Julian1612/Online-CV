@@ -93,18 +93,18 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 55px; /* höher */
+  height: 55px;
   width: 100%;
   background: #c0c0c0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 20px 2px 20px; /* extra Abstand nach unten (5px) */
+  padding: 0 20px 2px 20px;
   box-shadow: inset 0 1px #fff, inset 0 -1px #808080;
-  font-size: 16px; /* größerer Text */
+  font-size: 16px;
   z-index: 1000;
-  gap: 15px;
+  gap: 10px;
 }
+
 
 .start-button,
 .task,

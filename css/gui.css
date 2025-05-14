@@ -146,3 +146,41 @@ body {
   color:#33ff33; font-family:inherit; font-size:inherit;
   width:100%;
 }
+
+/* --- Taskbar-Tabs: Start-Wrapper und .task-button gleich groß und zentriert --- */
+.start-menu-wrapper,
+.task-button {
+  flex: 0 0 auto;           /* feste Breite, nicht dehnen */
+  height: 100%;             /* volle Taskbar-Höhe */
+  padding: 0 12px;          /* mehr Abstand links/rechts */
+  display: flex;
+  align-items: center;      /* vertikal zentrieren */
+  justify-content: center;  /* horizontal zentrieren */
+  background: #d4d0c8;
+  border: 2px outset #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Hover-Effekt */
+.start-menu-wrapper:hover,
+.task-button:hover {
+  background-color: #c0c0c0;
+}
+
+/* Icon-Größe im Tab */
+.start-button,
+.task-icon {
+  width: 28px;   /* anpassen je nach Wunsch */
+  height: 28px;
+  margin: 0;
+  image-rendering: pixelated;
+}
+
+/* Label-Abstand und Vertikalmittung */
+.task-label {
+  margin-left: 8px;      /* Abstand Icon → Text */
+  line-height: 28px;     /* gleiche Höhe wie Icon, zentriert */
+  font-size: 14px;
+  font-family: 'MS Sans Serif', sans-serif;
+}

@@ -87,3 +87,20 @@ function sendEmail(event) {
   const body    = encodeURIComponent(document.getElementById('emailBody').value);
   window.open(`mailto:${to}?subject=${subject}&body=${body}`, '_blank');
 }
+
+function updateClock() {
+  const now    = new Date();
+  const clock  = document.getElementById("clock");
+  const dateEl = document.getElementById("date");
+
+  clock.textContent = now.toLocaleTimeString([], {
+    hour: '2-digit', minute: '2-digit'
+  });
+  dateEl.textContent = now.toLocaleDateString('de-DE', {
+    weekday: 'short', day: '2-digit', month: '2-digit'
+  });
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+

@@ -76,31 +76,4 @@ function openTab(tabId, el) {
   el.classList.add('active');
 }
 
-function minimizeWindow(id) {
-  document.getElementById(id).style.display = 'none';
-}
-function maximizeWindow(id) {
-  const w = document.getElementById(id);
-  w.style.top = '5px'; w.style.left = '5px';
-  w.style.width = '90vw'; w.style.height = '80vh';
-}
-
-// ganz unten in js/common.js
-document.querySelectorAll('.title-bar').forEach(bar => {
-  let dragging = false, ox, oy;
-  bar.addEventListener('mousedown', e => {
-    dragging = true;
-    const w = bar.closest('.window');
-    ox = e.clientX - w.offsetLeft;
-    oy = e.clientY - w.offsetTop;
-    w.style.zIndex = ++openWindow.counter;
-  });
-  document.addEventListener('mousemove', e => {
-    if (!dragging) return;
-    const w = bar.closest('.window');
-    w.style.left = (e.clientX - ox) + 'px';
-    w.style.top  = (e.clientY - oy) + 'px';
-  });
-  document.addEventListener('mouseup', () => dragging = false);
-});
 

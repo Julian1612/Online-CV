@@ -269,4 +269,14 @@ body {
   height: 32px;
 }
 
+.desktop::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  background: url('img/noise.png') repeat; /* ein 8×8 oder 16×16 Graustufen-Noise */
+  opacity: 0.05;
+  z-index: 5;
+}
 

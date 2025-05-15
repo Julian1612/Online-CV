@@ -1,8 +1,9 @@
 
 command cd hinzufügen und die directorys Desktop documents Downloads Library Pictures
 
-about me fullen 
-ein lebenslauf pdf auf den desktop 
-in der taskleiste noch  ein internet browser für github, linkedin und mail
-noch ein mini game
-noch ein 
+- about me fullen 
+- online cv erstellen 
+- rickroll video datei runterladen und auf der webseite laufen lassen und nicht auf youtube switchen
+- weisses x in die roten schliess felder einbauen 
+- terminal immer die selbe größe lassen, sodass man runter geht mit den commadns 
+- datum einfüllen 

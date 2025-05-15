@@ -33,6 +33,12 @@ body {
   position: fixed; top: 20%; left: 25%;
   display: none; z-index: 10;
 }
+
+.window {
+  resize: both;       /* erlaubt Höhe & Breite ziehen */
+  overflow: auto;     /* bei zu kleinem Fenster scrollt der Inhalt */
+}
+
 .window.small {
   width: 300px; left: 100px; top: 100px; max-height: 300px;
 }
@@ -47,6 +53,13 @@ body {
   width:12px; height:12px; background:red; border:1px solid #000;
   cursor: pointer;
 }
+
+/* kleine farbenfrohe Pixel-Icons für minimize/maximize */
+.btn.minimize { width:12px; height:12px; background:url('img/min.png') no-repeat; }
+.btn.maximize { width:12px; height:12px; background:url('img/max.png') no-repeat; }
+/* beim hover invertieren (retro Feedback) */
+.btn.minimize:hover, .btn.maximize:hover { filter: invert(100%); }
+
 .window-body {
   background: #e0e0e0; padding: 10px; font-size: 14px;
 }

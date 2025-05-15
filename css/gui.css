@@ -229,3 +229,16 @@ body {
   top: 0; left: 0;
   width: 100%; height: 100%;
 }
+
+/* Pong-Canvas im Retro-Window */
+.pong-ui {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#pongCanvas {
+  background: #000;
+  border: 2px solid #fff;
+  image-rendering: pixelated;
+}
+

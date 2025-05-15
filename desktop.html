@@ -108,6 +108,20 @@
       </div>
     </div>
   </div>
+<!-- ... bestehende Fenster ... -->
+
+  <!-- Pong Game Window -->
+  <div class="window small" id="gameWindow">
+    <div class="title-bar">
+      <span class="title">Pong</span>
+      <div class="buttons">
+        <div class="btn close" onclick="closeWindow('gameWindow')"></div>
+      </div>
+    </div>
+    <div class="window-body pong-ui">
+      <canvas id="pongCanvas" width="300" height="200"></canvas>
+    </div>
+  </div>
 
   <!-- Taskbar -->
   <div class="taskbar">
@@ -136,6 +150,11 @@
     <div class="task-button" onclick="window.open('https://www.microsoft.com/de-de/','_blank')">
       <img src="img/internet.png" alt="Internet" class="task-icon">
       <span class="task-label">linkedIn.com</span>
+    </div>
+
+    <div class="task-button" onclick="openPong()">
+      <img src="img/game-icon.png" alt="Pong" class="task-icon">
+      <span class="task-label">Pong</span>
     </div>
 
 

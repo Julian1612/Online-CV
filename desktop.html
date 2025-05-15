@@ -123,21 +123,25 @@
         <div class="tab active" onclick="openTab('linkedin', this)">LinkedIn</div>
         <div class="tab"       onclick="openTab('github',   this)">GitHub</div>
       </div>
-      <!-- Content-Bereiche -->
+      <!-- LinkedIn-Widget -->
       <div class="browser-content" id="linkedin">
-        <!-- MemberProfile-Widget -->
         <script type="IN/MemberProfile"
-                data-id="https://www.linkedin.com"
+                data-id="https://www.linkedin.com/in/DEIN_USERNAME"
                 data-format="inline"
                 data-related="false">
         </script>
       </div>
-
+      <!-- GitHub über CORS-Proxy einbetten -->
       <div class="browser-content" id="github" style="display:none;">
-        <p style="padding:10px;">GitHub–Inhalt (leer)</p>
+        <iframe
+          src="https://api.allorigins.win/raw?url=https://github.com/DEIN_USERNAME"
+          style="width:100%; height:100%; border:none;"
+          sandbox="allow-same-origin allow-scripts allow-forms">
+        </iframe>
       </div>
     </div>
   </div>
+
 
 
   <!-- Taskbar -->

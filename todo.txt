@@ -1,4 +1,4 @@
-refactore code
+
 command cd hinzufügen und die directorys Desktop documents Downloads Library Pictures
 
 about me fullen 

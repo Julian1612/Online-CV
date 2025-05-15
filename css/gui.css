@@ -162,6 +162,12 @@ body {
   cursor: pointer;
 }
 
+.task-button.active {
+  background: #c0c0c0;
+  border: 2px inset #fff;
+}
+
+
 /* Hover-Effekt */
 .start-menu-wrapper:hover,
 .task-button:hover {

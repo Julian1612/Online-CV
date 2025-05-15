@@ -140,14 +140,13 @@ body {
 .clock { padding-right:40px; }
 
 .date {
-  display: block;           /* damit width greift */
-  width: 100%;              /* volle Breite des Containers */
-  text-align: center;       /* Text in der Mitte dieser Breite */
+  text-align: right;       /* Rechtsbündig innerhalb seines Elements */
   font-family: inherit;     /* übernimmt MS Sans Serif */
-  font-size: inherit;       /* gleiche Größe wie die Uhr */
+  font-size:   inherit;     /* gleiche Größe */
   font-weight: inherit;     /* gleiche Stärke */
-  color: inherit;           /* gleiche Farbe */
-  margin: 0;
+  color:       inherit;     /* gleiche Farbe */
+  margin:      0;           /* kein extra Abstand */
+  width:       auto;
 }
 
 /* --- Terminal-Fenster speziell --- */

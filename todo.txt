@@ -7,3 +7,5 @@ command cd hinzufügen und die directorys Desktop documents Downloads Library Pi
 - weisses x in die roten schliess felder einbauen 
 - terminal immer die selbe größe lassen, sodass man runter geht mit den commadns 
 - datum einfüllen 
+- alle symbole durch pixelige symbole tauschen um eine retro style daraus zu machen
+  auch das kreuz zum beispiel zum schliessen eines programms pixelig

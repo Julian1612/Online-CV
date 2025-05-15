@@ -134,6 +134,31 @@
     </div>
   </div>
 
+    <!-- Email Program Window -->
+  <div class="window" id="emailWindow">
+    <div class="title-bar">
+      <span class="title">Mail</span>
+      <div class="buttons">
+        <div class="btn close" onclick="closeWindow('emailWindow')"></div>
+      </div>
+    </div>
+    <div class="window-body">
+      <form class="email-form" onsubmit="sendEmail(event)">
+        <label>To:</label>
+        <input type="email" id="emailTo" value="julian@example.com" readonly />
+        <label>Subject:</label>
+        <input type="text" id="emailSubject" required />
+        <label>Message:</label>
+        <textarea id="emailBody" rows="6" required></textarea>
+        <div class="email-buttons">
+          <button type="submit">Send</button>
+          <button type="button" onclick="closeWindow('emailWindow')">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
   <!-- Taskbar -->
   <div class="taskbar">
     <div class="start-menu-wrapper">

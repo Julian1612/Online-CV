@@ -77,3 +77,13 @@ function openTab(tabId, el) {
 }
 
 
+/**
+ * Sendet die E-Mail per mailto und schließt das Fenster.
+ */
+function sendEmail(event) {
+  event.preventDefault();
+  const to      = encodeURIComponent(document.getElementById('emailTo').value);
+  const subject = encodeURIComponent(document.getElementById('emailSubject').value);
+  const body    = encodeURIComponent(document.getElementById('emailBody').value);
+  window.open(`mailto:${to}?subject=${subject}&body=${body}`, '_blank');
+}

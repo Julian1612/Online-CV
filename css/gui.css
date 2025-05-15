@@ -258,3 +258,39 @@ body {
   height: 32px;
 }
 
+/* --- Email-Form im Retro-Stil --- */
+.email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: 'MS Sans Serif', sans-serif;
+}
+.email-form label {
+  font-size: 12px;
+}
+.email-form input,
+.email-form textarea {
+  border: 2px inset #fff;
+  background: #e0e0e0;
+  padding: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+.email-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.email-buttons button {
+  padding: 4px 8px;
+  border: 2px outset #fff;
+  background: #d4d0c8;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+}
+.email-buttons button:hover {
+  background: #c0c0c0;
+}
+

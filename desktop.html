@@ -1,33 +1,32 @@
 <div class="desktop">
   <!-- Icons -->
   <div class="icon" onclick="openWindow('projectsFolder')">
-    <img src="img/folder-icon.png" alt="Folder"><span>Projects</span>
+    <img src="img/folder-icon.png" alt="Folder">
+    <span>Projects</span>
   </div>
   <div class="icon" onclick="openWindow('aboutWindow')">
-    <img src="img/text-icon.png" alt="Text"><span>About Me</span>
+    <img src="img/text-icon.png" alt="Text">
+    <span>About Me</span>
   </div>
   <div class="icon" onclick="openWindow('readmeWindow')">
-    <img src="img/text-icon.png" alt="Text"><span>Readme</span>
+    <img src="img/text-icon.png" alt="Text">
+    <span>Readme</span>
   </div>
+
   <!-- Important Passkeys (unten rechts) -->
   <div class="icon special-icon"
-     onclick="openWindow('rickWindow'); window.open(
-       'https://www.youtube.com/watch?v=xvFZjo5PgG0',
-       '_blank'
-     );">
+       onclick="openWindow('rickWindow'); window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0','_blank');">
     <img src="img/text-icon.png" alt="Text File">
     <span>MyPasswords.txt</span>
   </div>
-
-
 
   <!-- Projects Folder Window -->
   <div class="window small" id="projectsFolder">
     <div class="title-bar">
       <span class="title">projects</span>
       <div class="buttons">
-        <div class="btn close"    onclick="closeWindow('…')"></div>
-    </div>
+        <div class="btn close" onclick="closeWindow('projectsFolder')"></div>
+      </div>
     </div>
     <div class="window-body">
       <ul class="file-list">
@@ -64,8 +63,7 @@
     </div>
     <div class="window-body scrollable">
       <p>
-        Dies ist der Inhalt von project2.txt.
-
+        Dies ist der Inhalt von project2.txt.<br><br>
         Hier könnte z. B. eine Projektbeschreibung stehen
         oder dein persönliches Devlog.
       </p>
@@ -119,7 +117,6 @@
       </div>
     </div>
   </div>
-<!-- ... bestehende Fenster ... -->
 
   <!-- Pong Game Window -->
   <div class="window small" id="gameWindow">
@@ -134,7 +131,7 @@
     </div>
   </div>
 
-    <!-- Email Program Window -->
+  <!-- Email Program Window -->
   <div class="window" id="emailWindow">
     <div class="title-bar">
       <span class="title">Mail</span>
@@ -145,7 +142,7 @@
     <div class="window-body">
       <form class="email-form" onsubmit="sendEmail(event)">
         <label>To:</label>
-        <input type="email" id="emailTo" value="julian@example.com" readonly />
+        <input type="email" id="emailTo" value="jtschneider99@icloud.com" readonly />
         <label>Subject:</label>
         <input type="text" id="emailSubject" required />
         <label>Message:</label>
@@ -158,42 +155,46 @@
     </div>
   </div>
 
-
   <!-- Taskbar -->
   <div class="taskbar">
     <div class="start-menu-wrapper">
       <img src="img/start-icon.png" alt="Start" class="start-button" onclick="toggleStartMenu()" />
       <div class="start-menu" id="startMenu">
         <div class="menu-item" onclick="alert('Settings öffnen')">⚙️ Settings</div>
-        <div class="menu-item" onclick="openTerminal()">💻 Terminal</div>
+        <div class="menu-item" onclick="openWindow('terminalWindow'); initTerminal();">💻 Terminal</div>
         <div class="menu-item" onclick="alert('System wird heruntergefahren.')">⏻ Ausschalten</div>
       </div>
     </div>
 
-    
     <!-- Terminal-Tab -->
     <div class="task-button" onclick="openTerminal()">
       <img src="img/terminal-icon.png" alt="Terminal" class="task-icon">
       <span class="task-label">Terminal</span>
     </div>
-      <!-- Internet-Tab -->
-    <!-- Minimiertes Internet-Icon, das bei Klick github.com in neuem Tab öffnet -->
+
+    <!-- GitHub-Tab -->
     <div class="task-button" onclick="window.open('https://github.com','_blank')">
       <img src="img/internet.png" alt="Internet" class="task-icon">
       <span class="task-label">github.com</span>
     </div>
 
-    <div class="task-button" onclick="window.open('https://www.microsoft.com/de-de/','_blank')">
+    <!-- LinkedIn-Tab -->
+    <div class="task-button" onclick="window.open('https://www.linkedin.com','_blank')">
       <img src="img/internet.png" alt="Internet" class="task-icon">
-      <span class="task-label">linkedIn.com</span>
+      <span class="task-label">linkedin.com</span>
     </div>
 
+    <!-- Pong-Tab -->
     <div class="task-button" onclick="openPong()">
       <img src="img/game-icon.png" alt="Pong" class="task-icon">
       <span class="task-label">Pong</span>
     </div>
 
-
+    <!-- Mail-Tab -->
+    <div class="task-button" onclick="openWindow('emailWindow')">
+      <img src="img/email-icon.png" alt="Mail" class="task-icon">
+      <span class="task-label">Mail</span>
+    </div>
 
     <!-- Leerraum + Uhr -->
     <span class="task" style="flex-grow: 1;"></span>

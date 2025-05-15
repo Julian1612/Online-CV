@@ -242,3 +242,18 @@ body {
   image-rendering: pixelated;
 }
 
+.special-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 100;
+}
+.special-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+

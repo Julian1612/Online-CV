@@ -96,10 +96,14 @@ function updateClock() {
   clock.textContent = now.toLocaleTimeString([], {
     hour: '2-digit', minute: '2-digit'
   });
-  dateEl.textContent = now.toLocaleDateString('de-DE', {
-    weekday: 'short', day: '2-digit', month: '2-digit'
-  });
+
+  const day   = String(now.getDate()).padStart(2, '0');
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const year  = String(now.getFullYear()).slice(-2);
+
+  dateEl.textContent = `${day}.${month}.${year}`;
 }
+
 
 setInterval(updateClock, 1000);
 updateClock();

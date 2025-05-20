@@ -113,12 +113,7 @@ body {
   font-family: 'MS Sans Serif', sans-serif;
 }
 
-.start-menu-wrapper { position: relative; }
-.start-button {
-  height:100%; aspect-ratio:1/1; max-height:40px;
-  cursor:pointer; border:2px outset #fff; background:#d4d0c8;
-  image-rendering:pixelated;
-}
+
 .start-menu {
   position:absolute; bottom:35px; left:0;
   width:140px; background:#f0f0f0; border:2px solid #000;
@@ -141,6 +136,7 @@ body {
 
 .date {
   text-align: right;       /* Rechtsbündig innerhalb seines Elements */
+  padding-right: 40px;
   font-family: inherit;     /* übernimmt MS Sans Serif */
   font-size:   inherit;     /* gleiche Größe */
   font-weight: inherit;     /* gleiche Stärke */
@@ -189,67 +185,12 @@ body {
   border: 2px inset #fff;
 }
 
-
-/* Hover-Effekt */
-.start-menu-wrapper:hover,
-.task-button:hover {
-  background-color: #c0c0c0;
-}
-
-/* Icon-Größe im Tab */
-.start-button,
-.task-icon {
-  width: 28px;   /* anpassen je nach Wunsch */
-  height: 28px;
-  margin: 0;
-  image-rendering: pixelated;
-}
-
 /* Label-Abstand und Vertikalmittung */
 .task-label {
   margin-left: 8px;      /* Abstand Icon → Text */
   line-height: 28px;     /* gleiche Höhe wie Icon, zentriert */
   font-size: 14px;
   font-family: 'MS Sans Serif', sans-serif;
-}
-
-/* 90s-Browser-Style im Internet-Window */
-#internetWindow .browser-ui {
-  display: flex;
-  flex-direction: column;
-  height: calc(100% - 30px); /* abzüglich Title-Bar */
-}
-#internetWindow .browser-tabs {
-  display: flex;
-  background: #ddd;
-  border-bottom: 1px solid #aaa;
-}
-#internetWindow .tab {
-  padding: 4px 10px;
-  margin-right: 2px;
-  background: #eee;
-  border: 1px solid #aaa;
-  border-bottom: none;
-  cursor: pointer;
-  font-family: 'MS Sans Serif', sans-serif;
-  font-size: 14px;
-}
-#internetWindow .tab.active {
-  background: #fff;
-  font-weight: bold;
-}
-#internetWindow .browser-content {
-  flex: 1;
-  background: #fff;
-  border: 1px solid #aaa;
-  overflow: auto;
-  position: relative;
-}
-
-#internetWindow .browser-content iframe {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
 }
 
 /* Pong-Canvas im Retro-Window */

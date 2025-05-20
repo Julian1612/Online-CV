@@ -6,11 +6,11 @@
   </div>
   <div class="icon" onclick="openWindow('aboutWindow')">
     <img src="img/text-icon.png" alt="Text">
-    <span>About Me</span>
+    <span>aboutMe.txt</span>
   </div>
   <div class="icon" onclick="openWindow('readmeWindow')">
     <img src="img/text-icon.png" alt="Text">
-    <span>Readme</span>
+    <span>readMe.txt</span>
   </div>
 
   <!-- Important Passkeys (unten rechts) -->
@@ -25,57 +25,113 @@
     <div class="title-bar">
       <span class="title">projects</span>
       <div class="buttons">
-        <div class="btn close" onclick="closeWindow('projectsFolder')"></div>
+        <div class="btn close" onclick="closeWindow('projectsFolder')">
+          <img src="img/close-thin.png" alt="Close" class="close-icon">
+        </div>
       </div>
     </div>
     <div class="window-body">
       <ul class="file-list">
-        <li><a href="#" onclick="openTxtFile('file1')">📝 project1.txt</a></li>
-        <li><a href="#" onclick="openTxtFile('file2')">📝 project2.txt</a></li>
+        <li><a href="#" onclick="openTxtFile('file1')">📝 Libft.txt</a></li>
+        <li><a href="#" onclick="openTxtFile('file2')">📝 Minishell.txt</a></li>
+        <li><a href="#" onclick="openTxtFile('file3')">📝 Born2beroot.txt</a></li>
+        <li><a href="#" onclick="openTxtFile('file4')">📝 C++-Module.txt</a></li>
+        <li><a href="#" onclick="openTxtFile('file5')">📝 Inception.txt</a></li>
+        <li><a href="#" onclick="openTxtFile('file6')">📝 Vertical-Farm.txt</a></li>
       </ul>
     </div>
   </div>
 
-  <!-- Text File 1 -->
+  <!-- Text File Windows -->
   <div class="window" id="file1">
     <div class="title-bar">
-      <span class="title">project1.txt</span>
+      <span class="title">Libft.txt</span>
       <div class="buttons">
-        <div class="btn close" onclick="closeWindow('file1')"></div>
+        <div class="btn close" onclick="closeWindow('file1')">
+          <img src="img/close-thin.png" alt="Close" class="close-icon">
+        </div>
       </div>
     </div>
     <div class="window-body scrollable">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Curabitur a justo nec felis sagittis facilisis.
-        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        <!-- Inhalt von Libft.txt -->
+        Lorem ipsum dolor sit amet...
       </p>
     </div>
   </div>
 
-  <!-- Text File 2 -->
   <div class="window" id="file2">
     <div class="title-bar">
-      <span class="title">project2.txt</span>
+      <span class="title">Minishell.txt</span>
       <div class="buttons">
-        <div class="btn close" onclick="closeWindow('file2')"></div>
+        <div class="btn close" onclick="closeWindow('file2')">
+          <img src="img/close-thin.png" alt="Close" class="close-icon">
+        </div>
       </div>
     </div>
     <div class="window-body scrollable">
       <p>
-        Dies ist der Inhalt von project2.txt.<br><br>
-        Hier könnte z. B. eine Projektbeschreibung stehen
-        oder dein persönliches Devlog.
+        <!-- Inhalt von Minishell.txt -->
       </p>
     </div>
+  </div>
+
+  <div class="window" id="file3">
+    <div class="title-bar">
+      <span class="title">Born2beroot.txt</span>
+      <div class="buttons">
+        <div class="btn close" onclick="closeWindow('file3')">
+          <img src="img/close-thin.png" alt="Close" class="close-icon">
+        </div>
+      </div>
+    </div>
+    <div class="window-body scrollable"></div>
+  </div>
+
+  <div class="window" id="file4">
+    <div class="title-bar">
+      <span class="title">C++-Module.txt</span>
+      <div class="buttons">
+        <div class="btn close" onclick="closeWindow('file4')">
+          <img src="img/close-thin.png" alt="Close" class="close-icon">
+        </div>
+      </div>
+    </div>
+    <div class="window-body scrollable"></div>
+  </div>
+
+  <div class="window" id="file5">
+    <div class="title-bar">
+      <span class="title">Inception.txt</span>
+      <div class="buttons">
+        <div class="btn close" onclick="closeWindow('file5')">
+          <img src="img/close-thin.png" alt="Close" class="close-icon">
+        </div>
+      </div>
+    </div>
+    <div class="window-body scrollable"></div>
+  </div>
+
+  <div class="window" id="file6">
+    <div class="title-bar">
+      <span class="title">Vertical-Farm.txt</span>
+      <div class="buttons">
+        <div class="btn close" onclick="closeWindow('file6')">
+          <img src="img/close-thin.png" alt="Close" class="close-icon">
+        </div>
+      </div>
+    </div>
+    <div class="window-body scrollable"></div>
   </div>
 
   <!-- About Me -->
   <div class="window" id="aboutWindow">
     <div class="title-bar">
-      <span class="title">About Me</span>
+      <span class="title">AboutMe.txt</span>
       <div class="buttons">
-        <div class="btn close" onclick="closeWindow('aboutWindow')"></div>
+        <div class="btn close" onclick="closeWindow('aboutWindow')">
+          <img src="img/close-thin.png" alt="Close" class="close-icon">
+        </div>
       </div>
     </div>
     <div class="window-body">
@@ -86,9 +142,11 @@
   <!-- Readme -->
   <div class="window" id="readmeWindow">
     <div class="title-bar">
-      <span class="title">Readme</span>
+      <span class="title">readMe.txt</span>
       <div class="buttons">
-        <div class="btn close" onclick="closeWindow('readmeWindow')"></div>
+        <div class="btn close" onclick="closeWindow('readmeWindow')">
+          <img src="img/close-thin.png" alt="Close" class="close-icon">
+        </div>
       </div>
     </div>
     <div class="window-body">
@@ -106,7 +164,9 @@
     <div class="title-bar">
       <span class="title">Terminal</span>
       <div class="buttons">
-        <div class="btn close" onclick="closeWindow('terminalWindow')"></div>
+        <div class="btn close" onclick="closeWindow('terminalWindow')">
+          <img src="img/close-thin.png" alt="Close" class="close-icon">
+        </div>
       </div>
     </div>
     <div class="window-body">
@@ -123,7 +183,9 @@
     <div class="title-bar">
       <span class="title">Pong</span>
       <div class="buttons">
-        <div class="btn close" onclick="closeWindow('gameWindow')"></div>
+        <div class="btn close" onclick="closeWindow('gameWindow')">
+          <img src="img/close-thin.png" alt="Close" class="close-icon">
+        </div>
       </div>
     </div>
     <div class="window-body pong-ui">
@@ -136,7 +198,9 @@
     <div class="title-bar">
       <span class="title">Mail</span>
       <div class="buttons">
-        <div class="btn close" onclick="closeWindow('emailWindow')"></div>
+        <div class="btn close" onclick="closeWindow('emailWindow')">
+          <img src="img/close-thin.png" alt="Close" class="close-icon">
+        </div>
       </div>
     </div>
     <div class="window-body">
@@ -155,57 +219,46 @@
     </div>
   </div>
 
-<!-- Taskbar -->
-<div class="taskbar">
-  <div class="start-menu-wrapper">
-    <img src="img/start-icon.png" alt="Start" class="start-button" onclick="toggleStartMenu()" />
-    <div class="start-menu" id="startMenu">
-      <div class="menu-item" onclick="alert('Settings öffnen')">⚙️ Settings</div>
-      <div class="menu-item" onclick="openWindow('terminalWindow'); initTerminal();">💻 Terminal</div>
-      <div class="menu-item" onclick="alert('System wird heruntergefahren.')">⏻ Ausschalten</div>
+    <!-- Taskbar -->
+  <!-- Taskbar -->
+  <div class="taskbar">
+    <div class="start-button-new" onclick="toggleRetroMenu()">
+      <img src="img/start-icon.png" alt="Terminal" class="task-icon">
     </div>
-  </div>
+    <div class="retro-menu hidden" id="retroMenu">
+      <div class="retro-item" onclick="openWindow('projectsFolder')">📁 Dateimanager</div>
+      <div class="retro-item" onclick="openTerminal()">🖥 Terminal</div>
+      <div class="retro-item" onclick="switchToTerminalMode()">🔙 Classic Mode</div>
+      <div class="retro-item" onclick="shutdown()">⏻ Ausschalten</div>
+    </div>
 
-  <!-- Terminal-Tab -->
-  <div class="task-button" onclick="openTerminal()">
-    <img src="img/terminal-icon.png" alt="Terminal" class="task-icon">
-    <span class="task-label">Terminal</span>
-  </div>
+    <!-- Task Buttons -->
+    <div class="task-button" onclick="openTerminal()">
+      <img src="img/terminal-icon.png" alt="Terminal" class="task-icon">
+      <span class="task-label">Terminal</span>
+    </div>
+    <div class="task-button" onclick="window.open('https://github.com','_blank')">
+      <img src="img/internet.png" alt="Internet" class="task-icon">
+      <span class="task-label">github.com</span>
+    </div>
+    <div class="task-button" onclick="window.open('https://www.linkedin.com','_blank')">
+      <img src="img/internet.png" alt="Internet" class="task-icon">
+      <span class="task-label">linkedin.com</span>
+    </div>
+    <div class="task-button" onclick="openPong()">
+      <img src="img/game-icon.png" alt="Pong" class="task-icon">
+      <span class="task-label">Pong</span>
+    </div>
+    <div class="task-button" onclick="openWindow('emailWindow')">
+      <img src="img/email-icon.png" alt="Mail" class="task-icon">
+      <span class="task-label">Mail</span>
+    </div>
 
-  <!-- GitHub-Tab -->
-  <div class="task-button" onclick="window.open('https://github.com','_blank')">
-    <img src="img/internet.png" alt="Internet" class="task-icon">
-    <span class="task-label">github.com</span>
-  </div>
-
-  <!-- LinkedIn-Tab -->
-  <div class="task-button" onclick="window.open('https://www.linkedin.com','_blank')">
-    <img src="img/internet.png" alt="Internet" class="task-icon">
-    <span class="task-label">linkedin.com</span>
-  </div>
-
-  <!-- 42Heilbronn-Tab -->
-  <div class="task-button" onclick="window.open('https://www.42heilbronn.de/en/','_blank')">
-    <img src="img/internet.png" alt="Internet" class="task-icon">
-    <span class="task-label">42heilbronn.com</span>
-  </div>
-
-  <!-- Pong-Tab -->
-  <div class="task-button" onclick="openPong()">
-    <img src="img/game-icon.png" alt="Pong" class="task-icon">
-    <span class="task-label">Pong</span>
-  </div>
-
-  <!-- Mail-Tab -->
-  <div class="task-button" onclick="openWindow('emailWindow')">
-    <img src="img/email-icon.png" alt="Mail" class="task-icon">
-    <span class="task-label">Mail</span>
-  </div>
-
-  <!-- Leerraum + Uhr & Datum -->
-  <span class="task" style="flex-grow: 1;"></span>
-  <div class="time-container">
-    <span class="clock" id="clock"></span>
-    <span class="date"  id="date"></span>
+    <!-- Leerraum + Uhr & Datum -->
+    <span class="task" style="flex-grow: 1;"></span>
+    <div class="time-container">
+      <span class="clock" id="clock"></span>
+      <span class="date" id="date"></span>
+    </div>
   </div>
 </div>

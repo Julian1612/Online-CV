@@ -34,15 +34,21 @@ function updateClock() {
 }
 
 // 5) Start-Menü togglen
+// an den <script>-Block hängen oder in dein script.js packen
+const startWrapper = document.querySelector('.start-menu-wrapper');
+
 function toggleStartMenu() {
-  const m = document.getElementById('startMenu');
-  m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+  startWrapper.classList.toggle('open');
 }
+
+// Klick außerhalb schließt das Menü
 window.addEventListener('click', e => {
   if (!e.target.closest('.start-menu-wrapper')) {
-    document.getElementById('startMenu').style.display = 'none';
+    startWrapper.classList.remove('open');
   }
 });
+
+
 
 // 6) .txt-Fenster öffnen
 function openTxtFile(id) {
@@ -104,6 +110,20 @@ function updateClock() {
   dateEl.textContent = `${day}.${month}.${year}`;
 }
 
+function toggleRetroMenu() {
+  const menu = document.getElementById('retroMenu');
+  menu.classList.toggle('hidden');
+}
+
+function shutdown() {
+  alert("System wird heruntergefahren...");
+  // Optional: Fenster schließen, Animation etc.
+}
+
+function switchToTerminalMode() {
+  closeAllWindows(); // Diese Funktion ggf. definieren
+  openWindow('terminalWindow');
+}
 
 setInterval(updateClock, 1000);
 updateClock();

@@ -1,17 +1,16 @@
-/* --- Grundlayout --- */
+/* === Base Styles === */
 body {
   margin: 0;
-  background-color: #008080;
+  background: #008080;
   font-family: 'MS Sans Serif', sans-serif;
   overflow: hidden;
 }
 .desktop {
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
   gap: 20px;
   padding: 20px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   box-sizing: border-box;
 }
@@ -21,190 +20,197 @@ body {
   margin: 10px;
   cursor: pointer;
 }
-.icon img { width: 32px; height: 32px; }
+.icon img {
+  width: 32px;
+  height: 32px;
+}
 
-/* --- Fenster --- */
+/* === Windows === */
 .window {
-  width: 50vw;
-  max-height: 60vh;
+  position: fixed;
+  display: none;
   background: #c0c0c0;
   border: 2px solid #000;
   box-shadow: 2px 2px #000;
-  position: fixed; top: 20%; left: 25%;
-  display: none; z-index: 10;
+  font-size: 14px;
 }
-
+.window:not(.small) {
+  width: 50vw;
+  max-height: 60vh;
+  top: 20%;
+  left: 25%;
+}
 .window.small {
-  width: 300px; left: 100px; top: 100px; max-height: 300px;
+  width: 300px;
+  max-height: 300px;
+  top: 100px;
+  left: 100px;
 }
 .title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 8px;
   background: linear-gradient(to right, #000080, #0000cd);
-  color: #fff; padding: 3px 8px;
-  display: flex; justify-content: space-between; align-items: center;
+  color: #fff;
   font-weight: bold;
 }
-.title-bar .buttons { display: flex; gap: 4px; }
+.title-bar .buttons {
+  display: flex;
+  gap: 4px;
+}
+
+/* Close-Button – rotes Quadrat mit etwas kleinerem X */
 .btn.close {
-  width:12px; height:12px; background:red; border:1px solid #000;
-  cursor: pointer;
-}
-
-.window-body {
-  background: #e0e0e0; padding: 10px; font-size: 14px;
-}
-.file-list {
-  list-style:none; margin:0; padding:0;
-}
-.file-list a {
-  color:black; text-decoration:none; cursor:pointer;
-}
-.file-list a:hover {
-  background:#d0d0d0; display:inline-block; padding:2px 4px;
-}
-.scrollable { max-height:200px; overflow-y:auto; }
-
-/* --- Taskbar --- */
-.taskbar {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  background: red;
+  border: 1px solid #000;
   display: flex;
   align-items: center;
-  height: 55px;              /* schon gesetzt */
-  padding: 0 10px;           /* weniger Innenabstand */
-  gap: 2px;                  /* kleiner Abstand zwischen den Buttons */
-  background: #c0c0c0;       /* schon gesetzt */
-  box-shadow: inset 0 1px #fff, inset 0 -1px #808080;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.close-icon {
+  width: 12px;   /* kleiner als das 18×18 Quadrat */
+  height: 12px;
+  image-rendering: pixelated;
+}
+
+
+.window-body {
+  background: #e0e0e0;
+  padding: 10px;
+}
+.scrollable {
+  max-height: 200px;
+  overflow-y: auto;
+}
+.file-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.file-list a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.file-list a:hover {
+  background: #d0d0d0;
+  padding: 2px 4px;
+  display: inline-block;
+}
+
+/* === Taskbar === */
+.taskbar {
   position: fixed;
   bottom: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  height: 55px;
   width: 100%;
+  background: #c0c0c0;
+  box-shadow: inset 0 1px #fff, inset 0 -1px #808080;
+  padding-right: 10px;  /* left-padding removed so start-button can be flush */
+  gap: 2px;
+  z-index: 1000;
+}
+/* start-button flush left, PNG fills entire area */
+:root {
+  --taskbar-height: 55px;
+}
+
+/* Taskbar */
+.start-button-new {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 12px;
+  background: #d4d0c8;
+  border: 2px outset #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.retro-menu {
+  position: absolute;
+  bottom: 57px;
+  left: 0;
+  background-color: #c0c0c0;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #888;
+  font-family: 'Tahoma', sans-serif;
+  width: 180px;
   z-index: 1000;
 }
 
-.start-menu-wrapper,
+.retro-menu.hidden {
+  display: none;
+}
+
+.retro-item {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.retro-item:hover {
+  background-color: #000080;
+  color: #fff;
+}
+
+
+/* Task Buttons */
 .task-button {
-  flex: 0 0 auto;            /* feste Breite, nehmen nicht den restlichen Platz ein */
-  height: 100%;              /* gesamte Taskbar-Höhe */
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  padding: 0 12px;
   background: #d4d0c8;
   border: 2px outset #fff;
   box-sizing: border-box;
   cursor: pointer;
 }
-
-/* gleiches Hover-Verhalten */
-.start-menu-wrapper:hover,
-.task-button:hover {
-  background-color: #c0c0c0;
+.task-button:hover,
+.task-button.active {
+  background: #c0c0c0;
 }
-
-/* Icon und Label im Button */
-.task-icon,
-.start-button {
-  margin: 0;
+.task-icon {
   width: 24px;
   height: 24px;
+  object-fit: contain;
   image-rendering: pixelated;
 }
-
 .task-label {
   margin-left: 6px;
   font-size: 14px;
-  font-family: 'MS Sans Serif', sans-serif;
 }
 
-
-.start-menu {
-  position:absolute; bottom:35px; left:0;
-  width:140px; background:#f0f0f0; border:2px solid #000;
-  display:none; flex-direction:column; box-shadow:2px 2px #888; z-index:999;
+/* Leerraum + Uhr & Datum */
+.task {
+  flex: 1;
 }
-
 .time-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* rechtsbündig */
+  text-align: right;
   line-height: 1.2;
-  font-family: 'MS Sans Serif', sans-serif;
   font-size: 14px;
 }
-
-.menu-item { padding:6px 10px; cursor:pointer; }
-.menu-item:hover { background:#c0c0c0; }
-.task { flex-grow:1; text-align:center; }
-.clock { padding-right:40px; }
-
+.clock,
 .date {
-  text-align: right;       /* Rechtsbündig innerhalb seines Elements */
+  display: block;
   padding-right: 40px;
-  font-family: inherit;     /* übernimmt MS Sans Serif */
-  font-size:   inherit;     /* gleiche Größe */
-  font-weight: inherit;     /* gleiche Stärke */
-  color:       inherit;     /* gleiche Farbe */
-  margin:      0;           /* kein extra Abstand */
-  width:       auto;
 }
 
-/* --- Terminal-Fenster speziell --- */
-#terminalWindow .window-body {
-  background:#000; color:#33ff33;
-  font-family:'Courier New', monospace; font-size:16px;
-}
-#terminalWindow #output {
-  max-height:50vh; overflow-y:auto; white-space:pre-wrap;
-  padding:10px;
-}
-#terminalWindow #welcome { font-style:italic; margin-bottom:1rem; }
-#terminalWindow .input-line {
-  display:flex; align-items:center; margin-top:0.5rem;
-}
-#terminalWindow .prompt { margin-right:0.5rem; }
-#terminalWindow input[type="text"] {
-  background:none; border:none; outline:none;
-  color:#33ff33; font-family:inherit; font-size:inherit;
-  width:100%;
-}
 
-/* --- Taskbar-Tabs: Start-Wrapper und .task-button gleich groß und zentriert --- */
-.start-menu-wrapper,
-.task-button {
-  flex: 0 0 auto;           /* feste Breite, nicht dehnen */
-  height: 100%;             /* volle Taskbar-Höhe */
-  padding: 0 12px;          /* mehr Abstand links/rechts */
-  display: flex;
-  align-items: center;      /* vertikal zentrieren */
-  justify-content: center;  /* horizontal zentrieren */
-  background: #d4d0c8;
-  border: 2px outset #fff;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-.task-button.active {
-  background: #c0c0c0;
-  border: 2px inset #fff;
-}
-
-/* Label-Abstand und Vertikalmittung */
-.task-label {
-  margin-left: 8px;      /* Abstand Icon → Text */
-  line-height: 28px;     /* gleiche Höhe wie Icon, zentriert */
-  font-size: 14px;
-  font-family: 'MS Sans Serif', sans-serif;
-}
-
-/* Pong-Canvas im Retro-Window */
-.pong-ui {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#pongCanvas {
-  background: #000;
-  border: 2px solid #fff;
-  image-rendering: pixelated;
-}
-
+/* === Special Icon === */
 .special-icon {
   position: absolute;
   bottom: 200px;
@@ -212,31 +218,45 @@ body {
   width: 70px;
   text-align: center;
   cursor: pointer;
-  z-index: 100;
 }
 .special-icon img {
   width: 32px;
   height: 32px;
 }
 
-/* --- Email-Form im Retro-Stil --- */
+/* === Terminal Window Specific === */
+#terminalWindow .window-body {
+  background: #000;
+  color: #33ff33;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+}
+#terminalWindow #output {
+  max-height: 50vh;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  padding: 10px;
+}
+/* Terminal-Input wieder schwarz hinterlegen */
+#terminalWindow input[type="text"] {
+  background: #000;       /* schwarzer Hintergrund */
+  color: #33ff33;         /* grüner Text wie gewohnt */
+  border: none;           /* ohne Rahmen */
+  outline: none;          /* kein Focus-Outline */
+}
+
+
+/* === Email Form === */
 .email-form {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  font-family: 'MS Sans Serif', sans-serif;
-}
-.email-form label {
-  font-size: 12px;
 }
 .email-form input,
 .email-form textarea {
   border: 2px inset #fff;
   background: #e0e0e0;
   padding: 4px;
-  font-family: inherit;
-  font-size: 14px;
-  outline: none;
 }
 .email-buttons {
   display: flex;
@@ -248,10 +268,7 @@ body {
   border: 2px outset #fff;
   background: #d4d0c8;
   cursor: pointer;
-  font-family: inherit;
-  font-size: 14px;
 }
 .email-buttons button:hover {
   background: #c0c0c0;
 }
-

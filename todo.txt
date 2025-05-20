@@ -6,6 +6,7 @@ command cd hinzufügen und die directorys Desktop documents Downloads Library Pi
 - rickroll video datei runterladen und auf der webseite laufen lassen und nicht auf youtube switchen
 - weisses x in die roten schliess felder einbauen 
 - terminal immer die selbe größe lassen, sodass man runter geht mit den commadns 
-- datum einfüllen 
 - alle symbole durch pixelige symbole tauschen um eine retro style daraus zu machen
   auch das kreuz zum beispiel zum schliessen eines programms pixelig
+
+- code refactoren und mehr aufteilen in taskbar, dektop, icons etc und jeweils ein dazu gehöriges css

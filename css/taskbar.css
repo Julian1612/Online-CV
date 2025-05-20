@@ -1,0 +1,93 @@
+
+/* === Taskbar Styles === */
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 55px;
+  width: 100%;
+  background: #c0c0c0;
+  box-shadow: inset 0 1px #fff, inset 0 -1px #808080;
+  padding-right: 10px;
+  gap: 2px;
+  z-index: 1000;
+}
+:root {
+  --taskbar-height: 55px;
+}
+.start-button-new {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 12px;
+  background: #d4d0c8;
+  border: 2px outset #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.retro-menu {
+  position: absolute;
+  bottom: 57px;
+  left: 0;
+  background-color: #c0c0c0;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #888;
+  font-family: 'Tahoma', sans-serif;
+  width: 180px;
+  z-index: 1000;
+}
+.retro-menu.hidden {
+  display: none;
+}
+.retro-item {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+.retro-item:hover {
+  background-color: #000080;
+  color: #fff;
+}
+.task-button {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 12px;
+  background: #d4d0c8;
+  border: 2px outset #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.task-button:hover,
+.task-button.active {
+  background: #c0c0c0;
+}
+.task-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.task-label {
+  margin-left: 6px;
+  font-size: 14px;
+}
+.task {
+  flex: 1;
+}
+.time-container {
+  text-align: right;
+  line-height: 1.2;
+  font-size: 14px;
+}
+.clock,
+.date {
+  display: block;
+  padding-right: 40px;
+}

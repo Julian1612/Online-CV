@@ -1,0 +1,46 @@
+
+<!-- taskbar.html -->
+<div class="taskbar">
+  <div class="start-button-new" onclick="toggleRetroMenu()">
+    <img src="img/start-icon.png" alt="Terminal" class="task-icon">
+  </div>
+  <div class="retro-menu hidden" id="retroMenu">
+    <div class="retro-item" onclick="openWindow('projectsFolder')">📁 Dateimanager</div>
+    <div class="retro-item" onclick="openTerminal()">🖥 Terminal</div>
+    <div class="retro-item" onclick="switchToTerminalMode()">🔙 Classic Mode</div>
+    <div class="retro-item" onclick="shutdown()">⏻ Ausschalten</div>
+  </div>
+
+  <!-- Task Buttons -->
+  <div class="task-button" onclick="openTerminal()">
+    <img src="img/terminal-icon.png" alt="Terminal" class="task-icon">
+    <span class="task-label">Terminal</span>
+  </div>
+  <div class="task-button" onclick="window.open('https://github.com/Julian1612','_blank')">
+    <img src="img/internet.png" alt="Internet" class="task-icon">
+    <span class="task-label">github.com</span>
+  </div>
+  <div class="task-button" onclick="window.open('https://www.linkedin.com/in/jts99/','_blank')">
+    <img src="img/internet.png" alt="Internet" class="task-icon">
+    <span class="task-label">linkedin.com</span>
+  </div>
+  <div class="task-button" onclick="window.open('https://www.42heilbronn.de','_blank')">
+    <img src="img/internet.png" alt="Internet" class="task-icon">
+    <span class="task-label">42heilbronn.de</span>
+  </div>
+  <div class="task-button" onclick="openPong()">
+    <img src="img/game-icon.png" alt="Pong" class="task-icon">
+    <span class="task-label">Pong</span>
+  </div>
+  <div class="task-button" onclick="openWindow('emailWindow')">
+    <img src="img/email-icon.png" alt="Mail" class="task-icon">
+    <span class="task-label">Mail</span>
+  </div>
+
+  <!-- Leerraum + Uhr & Datum -->
+  <span class="task" style="flex-grow: 1;"></span>
+  <div class="time-container">
+    <span class="clock" id="clock"></span>
+    <span class="date" id="date"></span>
+  </div>
+</div>

@@ -11,8 +11,16 @@ function closeWindow(id) {
   if (el) el.style.display = 'none';
 }
 
-// .txt-Dateien öffnen
-function openTxtFile(id) {
-  ['file1', 'file2'].forEach(i => closeWindow(i));
+function openTxtFile(id, filePath) {
   openWindow(id);
+  fetch(filePath)
+    .then(res => res.text())
+    .then(text => {
+      const el = document.getElementById(`${id}-body`);
+      if (el) el.innerText = text;
+    })
+    .catch(err => {
+      console.error(`Fehler beim Laden von ${filePath}:`, err);
+    });
 }
+

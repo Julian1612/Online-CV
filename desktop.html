@@ -1,5 +1,3 @@
-
-<!-- desktop.html -->
 <!-- Icons -->
 <div class="icon" onclick="openWindow('projectsFolder')">
   <img src="img/folder-icon.png" alt="Folder">
@@ -33,129 +31,87 @@
   </div>
   <div class="window-body">
     <ul class="file-list">
-      <li><a href="#" onclick="openTxtFile('file1')">📝 Libft.txt</a></li>
-      <li><a href="#" onclick="openTxtFile('file2')">📝 Minishell.txt</a></li>
-      <li><a href="#" onclick="openTxtFile('file3')">📝 Born2beroot.txt</a></li>
-      <li><a href="#" onclick="openTxtFile('file4')">📝 C++-Module.txt</a></li>
-      <li><a href="#" onclick="openTxtFile('file5')">📝 Inception.txt</a></li>
-      <li><a href="#" onclick="openTxtFile('file6')">📝 Vertical-Farm.txt</a></li>
+      <li><a href="#" onclick="openTxtFile('file1', 'txt/Libft.txt')">📝 Libft.txt</a></li>
+      <li><a href="#" onclick="openTxtFile('file2', 'txt/Minishell.txt')">📝 Minishell.txt</a></li>
+      <li><a href="#" onclick="openTxtFile('file3', 'txt/Born2beroot.txt')">📝 Born2beroot.txt</a></li>
+      <li><a href="#" onclick="openTxtFile('file4', 'txt/C++-Module.txt')">📝 C++-Module.txt</a></li>
+      <li><a href="#" onclick="openTxtFile('file5', 'txt/Inception.txt')">📝 Inception.txt</a></li>
+      <li><a href="#" onclick="openTxtFile('file6', 'txt/Vertical-Farm.txt')">📝 Vertical-Farm.txt</a></li>
     </ul>
   </div>
 </div>
 
 <!-- Text File Windows -->
 <div class="window" id="file1">
-  <div class="title-bar">
-    <span class="title">Libft.txt</span>
-    <div class="buttons">
-      <div class="btn close" onclick="closeWindow('file1')">
-        <img src="img/close-thin.png" alt="Close" class="close-icon">
-      </div>
+  <div class="title-bar"><span class="title">Libft.txt</span>
+    <div class="buttons"><div class="btn close" onclick="closeWindow('file1')">
+      <img src="img/close-thin.png" alt="Close" class="close-icon"></div>
     </div>
   </div>
-  <div class="window-body scrollable">
-    <p>
-      <!-- Inhalt von Libft.txt -->
-      Lorem ipsum dolor sit amet...
-    </p>
-  </div>
+  <div class="window-body scrollable" id="file1-body"></div>
 </div>
 
 <div class="window" id="file2">
-  <div class="title-bar">
-    <span class="title">Minishell.txt</span>
-    <div class="buttons">
-      <div class="btn close" onclick="closeWindow('file2')">
-        <img src="img/close-thin.png" alt="Close" class="close-icon">
-      </div>
+  <div class="title-bar"><span class="title">Minishell.txt</span>
+    <div class="buttons"><div class="btn close" onclick="closeWindow('file2')">
+      <img src="img/close-thin.png" alt="Close" class="close-icon"></div>
     </div>
   </div>
-  <div class="window-body scrollable">
-    <p>
-      <!-- Inhalt von Minishell.txt -->
-    </p>
-  </div>
+  <div class="window-body scrollable" id="file2-body"></div>
 </div>
 
 <div class="window" id="file3">
-  <div class="title-bar">
-    <span class="title">Born2beroot.txt</span>
-    <div class="buttons">
-      <div class="btn close" onclick="closeWindow('file3')">
-        <img src="img/close-thin.png" alt="Close" class="close-icon">
-      </div>
+  <div class="title-bar"><span class="title">Born2beroot.txt</span>
+    <div class="buttons"><div class="btn close" onclick="closeWindow('file3')">
+      <img src="img/close-thin.png" alt="Close" class="close-icon"></div>
     </div>
   </div>
-  <div class="window-body scrollable"></div>
+  <div class="window-body scrollable" id="file3-body"></div>
 </div>
 
 <div class="window" id="file4">
-  <div class="title-bar">
-    <span class="title">C++-Module.txt</span>
-    <div class="buttons">
-      <div class="btn close" onclick="closeWindow('file4')">
-        <img src="img/close-thin.png" alt="Close" class="close-icon">
-      </div>
+  <div class="title-bar"><span class="title">C++-Module.txt</span>
+    <div class="buttons"><div class="btn close" onclick="closeWindow('file4')">
+      <img src="img/close-thin.png" alt="Close" class="close-icon"></div>
     </div>
   </div>
-  <div class="window-body scrollable"></div>
+  <div class="window-body scrollable" id="file4-body"></div>
 </div>
 
 <div class="window" id="file5">
-  <div class="title-bar">
-    <span class="title">Inception.txt</span>
-    <div class="buttons">
-      <div class="btn close" onclick="closeWindow('file5')">
-        <img src="img/close-thin.png" alt="Close" class="close-icon">
-      </div>
+  <div class="title-bar"><span class="title">Inception.txt</span>
+    <div class="buttons"><div class="btn close" onclick="closeWindow('file5')">
+      <img src="img/close-thin.png" alt="Close" class="close-icon"></div>
     </div>
   </div>
-  <div class="window-body scrollable"></div>
+  <div class="window-body scrollable" id="file5-body"></div>
 </div>
 
 <div class="window" id="file6">
-  <div class="title-bar">
-    <span class="title">Vertical-Farm.txt</span>
-    <div class="buttons">
-      <div class="btn close" onclick="closeWindow('file6')">
-        <img src="img/close-thin.png" alt="Close" class="close-icon">
-      </div>
+  <div class="title-bar"><span class="title">Vertical-Farm.txt</span>
+    <div class="buttons"><div class="btn close" onclick="closeWindow('file6')">
+      <img src="img/close-thin.png" alt="Close" class="close-icon"></div>
     </div>
   </div>
-  <div class="window-body scrollable"></div>
+  <div class="window-body scrollable" id="file6-body"></div>
 </div>
 
 <!-- About Me -->
 <div class="window" id="aboutWindow">
-  <div class="title-bar">
-    <span class="title">AboutMe.txt</span>
-    <div class="buttons">
-      <div class="btn close" onclick="closeWindow('aboutWindow')">
-        <img src="img/close-thin.png" alt="Close" class="close-icon">
-      </div>
+  <div class="title-bar"><span class="title">AboutMe.txt</span>
+    <div class="buttons"><div class="btn close" onclick="closeWindow('aboutWindow')">
+      <img src="img/close-thin.png" alt="Close" class="close-icon"></div>
     </div>
   </div>
-  <div class="window-body">
-    <p>Hi, I'm Julian – a curious developer who loves minimalism, tech, and retro vibes 😎</p>
-  </div>
+  <div class="window-body scrollable" id="aboutWindow-body"></div>
 </div>
 
 <!-- Readme -->
 <div class="window" id="readmeWindow">
-  <div class="title-bar">
-    <span class="title">readMe.txt</span>
-    <div class="buttons">
-      <div class="btn close" onclick="closeWindow('readmeWindow')">
-        <img src="img/close-thin.png" alt="Close" class="close-icon">
-      </div>
+  <div class="title-bar"><span class="title">readMe.txt</span>
+    <div class="buttons"><div class="btn close" onclick="closeWindow('readmeWindow')">
+      <img src="img/close-thin.png" alt="Close" class="close-icon"></div>
     </div>
   </div>
-  <div class="window-body">
-    <p>
-      Welcome to my website! Explore my personal computer — browse folders, open text files,
-      and play with the interface. You can also switch to the terminal and navigate like a real developer.
-      Type 'help' to see all available commands. Discover my projects and experience in software development,
-      and feel free to leave a message to get in touch 😎
-    </p>
-  </div>
+  <div class="window-body scrollable" id="readmeWindow-body"></div>
 </div>

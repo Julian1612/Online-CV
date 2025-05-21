@@ -21,8 +21,13 @@ async function loadDesktop() {
       `;
   
       initializeGUI();
+  
+      // 📂 readMe.md automatisch öffnen nach GUI-Initialisierung
+      openTxtFile('readmeWindow', 'txt/readMe.md');
+  
     } catch (e) {
       console.error('Load Desktop failed:', e);
     }
   }
+  
   

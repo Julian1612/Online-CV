@@ -1,8 +1,19 @@
 - files zu markdown files machen und fenster kleiner machen.
 - about me fullen 
 - projekte füllen 
+    - die pdf vom projekt einbauen
+    - add a folder private projects
+        - project creater 
+    - add a hackathons folder 
+        - add a description of tamabara 
+        - add a description for 42 hackthon
 - online cv erstellen 
 
+- temrinal 
+ - mehrere ebenen einbauen (documents, Desktop, Downloads...) (Easteregg hinzufügen)
+    - cd command einbauen
+    - den curl command entwickeln um pdf etc runter zu laden.
+    
 command cd hinzufügen und die directorys Desktop documents Downloads Library Pictures
 
 

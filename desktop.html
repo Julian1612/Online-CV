@@ -3,11 +3,11 @@
   <img src="img/folder-icon.png" alt="Folder">
   <span>Projects</span>
 </div>
-<div class="icon" onclick="openWindow('aboutWindow')">
+<div class="icon" onclick="openTxtFile('aboutWindow', 'txt/AboutMe.md')">
   <img src="img/text-icon.png" alt="Text">
   <span>aboutMe.txt</span>
 </div>
-<div class="icon" onclick="openWindow('readmeWindow')">
+<div class="icon" onclick="openTxtFile('readmeWindow', 'txt/readMe.md')">
   <img src="img/text-icon.png" alt="Text">
   <span>readMe.txt</span>
 </div>
@@ -31,12 +31,12 @@
   </div>
   <div class="window-body">
     <ul class="file-list">
-      <li><a href="#" onclick="openTxtFile('file1', 'txt/Libft.txt')">📝 Libft.txt</a></li>
-      <li><a href="#" onclick="openTxtFile('file2', 'txt/Minishell.txt')">📝 Minishell.txt</a></li>
-      <li><a href="#" onclick="openTxtFile('file3', 'txt/Born2beroot.txt')">📝 Born2beroot.txt</a></li>
-      <li><a href="#" onclick="openTxtFile('file4', 'txt/C++-Module.txt')">📝 C++-Module.txt</a></li>
-      <li><a href="#" onclick="openTxtFile('file5', 'txt/Inception.txt')">📝 Inception.txt</a></li>
-      <li><a href="#" onclick="openTxtFile('file6', 'txt/Vertical-Farm.txt')">📝 Vertical-Farm.txt</a></li>
+      <li><a href="#" onclick="openTxtFile('file1', 'txt/Libft.md')">📝 Libft.txt</a></li>
+      <li><a href="#" onclick="openTxtFile('file2', 'txt/Minishell.md')">📝 Minishell.txt</a></li>
+      <li><a href="#" onclick="openTxtFile('file3', 'txt/Born2beroot.md')">📝 Born2beroot.txt</a></li>
+      <li><a href="#" onclick="openTxtFile('file4', 'txt/Cpp.md')">📝 C++-Module.txt</a></li>
+      <li><a href="#" onclick="openTxtFile('file5', 'txt/Inceptions.md')">📝 Inception.txt</a></li>
+      <li><a href="#" onclick="openTxtFile('file6', 'txt/VerticalFarm.md')">📝 Vertical-Farm.txt</a></li>
     </ul>
   </div>
 </div>
@@ -109,8 +109,10 @@
 <!-- Readme -->
 <div class="window" id="readmeWindow">
   <div class="title-bar"><span class="title">readMe.txt</span>
-    <div class="buttons"><div class="btn close" onclick="closeWindow('readmeWindow')">
-      <img src="img/close-thin.png" alt="Close" class="close-icon"></div>
+    <div class="buttons">
+      <div class="btn close" onclick="closeWindow('readmeWindow')">
+        <img src="img/close-thin.png" alt="Close" class="close-icon">
+      </div>
     </div>
   </div>
   <div class="window-body scrollable" id="readmeWindow-body"></div>

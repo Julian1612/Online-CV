@@ -1,3 +1,8 @@
+top prio: 
+  - window großen anpassen
+  - folder 42 projects anlegen -> What-is-42.txt erstellen 
+  - folder andere projekte praktika und hackathon einfügen
+
 - files zu markdown files machen und fenster kleiner machen.
 - about me fullen 
 - projekte füllen 
@@ -19,3 +24,4 @@ command cd hinzufügen und die directorys Desktop documents Downloads Library Pi
 
 - terminal immer die selbe größe lassen, sodass man runter geht mit den commadns 
 - Bei aufrufen mit dem Smartphone verweigern und einen text bla bla ist dafür gedacht mit laptop zu nutzten.
+- Add retro pixel cursour

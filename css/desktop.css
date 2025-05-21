@@ -34,7 +34,6 @@ body {
   border: 2px solid #000;
   box-shadow: 2px 2px #000;
   font-size: 14px;
-  width: 40px;
 }
 .window:not(.small) {
   width: 50vw;

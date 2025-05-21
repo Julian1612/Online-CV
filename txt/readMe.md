@@ -1,26 +1,15 @@
-# 💾 Julian's Portfolio Desktop
+# 💾 Julian’s Portfolio Desktop
 
-Hey there — welcome to my portfolio page.
+Welcome to my desktop! Here’s a quick guide:
 
-You’re looking at my desktop.  
-Feel free to poke around, open some windows, and explore the stuff I’ve been working on.
+- 🗂 **Browse Projects**  
+  Open the **Projects** folder to explore my work.
 
-- 🗂 **Peek into my projects**  
-  Get a look at what I’ve built — along with the tools, ideas, and experiments behind it.
+- 💻 **Use the Terminal**  
+  Type `help` to see all available commands.
 
-- 🧠 **See what I’ve learned**  
-  Projects, hands-on experience, lessons included.
+- 🕹 **Play a Retro Game**  
+  Have fun and try to beat the high score!
 
-- 💻 **Use the built-in terminal**  
-  Try the `help` command to see what it can do.
-
-- 🕹 **Play a retro game**  
-  Have fun and beat the record!
-
-- 📬 **Get in touch**  
-  Reach out via [email](mailto:your-email@example.com), or connect on [LinkedIn](https://www.linkedin.com/in/yourprofile) and [GitHub](https://github.com/Julian1612).
-
----
-
-Thanks for stopping by — make yourself at home 👋
-
+- 📬 **Get in Touch**  
+  [Email](mailto:your-email@example.com) • [LinkedIn](https://www.linkedin.com/in/yourprofile) • [GitHub](https://github.com/Julian1612)  

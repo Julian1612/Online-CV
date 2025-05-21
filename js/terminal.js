@@ -8,7 +8,6 @@ const commands = {
     cat experience.txt Show experience
     clear              Clear output
     rm -rf /           !!! WARNING !!!
-    startx             Reset GUI
   
   Example:
     cat skills.txt

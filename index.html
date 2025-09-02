@@ -105,12 +105,6 @@
         #snake-restart-btn:active { border-color: #808080 #ffffff #ffffff #808080; }
         
         /* --- Einstellungs-Fenster --- */
-        #settings-window .window-content { padding: 0; margin: 0; display: flex; flex-direction: column; }
-        .settings-tabs { display: flex; background: #c0c0c0; border-bottom: 1px solid #808080; }
-        .tab-btn { padding: 8px 12px; border: none; background: #c0c0c0; border-right: 1px solid #808080; }
-        .tab-btn.active { background: #e0e0e0; border-bottom: 1px solid #e0e0e0; }
-        .settings-tab-content { padding: 15px; display: none; }
-        .settings-tab-content.active { display: block; }
         .settings-section { margin-bottom: 20px; }
         .settings-section h3 { margin-bottom: 10px; }
         .radio-group label { display: block; margin-bottom: 5px; }
@@ -193,35 +187,7 @@
         <div class="window" id="terminal-window" style="width: 600px; height: 350px;"><div class="title-bar"><span>user@desktop</span><div class="window-controls"><button class="minimize-btn">_</button><button class="maximize-btn">❐</button><button class="close-btn">x</button></div></div><div class="window-content"><div id="terminal-output"></div><div id="terminal-input-line"><span id="terminal-prompt">~/ $ </span><input type="text" id="terminal-input" autofocus></div></div></div>
         <div class="window" id="snake-window" style="width: 444px; height: 530px; resize: none;"><div class="title-bar"><span data-lang-key="snake">Snake</span><div class="window-controls"><button class="minimize-btn">_</button><button class="maximize-btn">❐</button><button class="close-btn">x</button></div></div><div class="window-content"><canvas id="snake-canvas" width="400" height="400"></canvas><div class="snake-controls"><button id="snake-restart-btn" style="display: none;" data-lang-key="restart">Neustart</button></div></div></div>
         
-        <div class="window" id="settings-window" style="width: 400px; height: 350px;">
-            <div class="title-bar"><span data-lang-key="settings">Einstellungen</span><div class="window-controls"><button class="minimize-btn">_</button><button class="maximize-btn">❐</button><button class="close-btn">x</button></div></div>
-            <div class="window-content">
-                <div class="settings-tabs">
-                    <button class="tab-btn active" data-tab="display">Anzeige</button>
-                    <button class="tab-btn" data-tab="system">System</button>
-                </div>
-                <div id="tab-display" class="settings-tab-content active">
-                    <div class="settings-section">
-                        <h3 data-lang-key="theme">Farbschema</h3>
-                        <div class="radio-group" id="theme-selector">
-                            <label><input type="radio" name="theme" value="default" checked> <span data-lang-key="theme_default">Klassisch</span></label>
-                            <label><input type="radio" name="theme" value="theme-night"> <span data-lang-key="theme_night">Nachtmodus</span></label>
-                            <label><input type="radio" name="theme" value="theme-purple"> <span data-lang-key="theme_purple">Lila Traum</span></label>
-                        </div>
-                    </div>
-                </div>
-                <div id="tab-system" class="settings-tab-content">
-                    <h3>Systeminformationen</h3>
-                    <p>
-                        Portfolio OS v1.0<br>
-                        © Max Mustermann<br><br>
-                        Computer:<br>
-                        RetroChip 95 CPU @ 75MHz<br>
-                        64.0MB RAM
-                    </p>
-                </div>
-            </div>
-        </div>
+        <div class="window" id="settings-window" style="width: 400px; height: 350px;"><div class="title-bar"><span data-lang-key="settings">Einstellungen</span><div class="window-controls"><button class="minimize-btn">_</button><button class="maximize-btn">❐</button><button class="close-btn">x</button></div></div><div class="window-content"><div class="settings-section"><h3 data-lang-key="language">Sprache</h3><select id="language-select"><option value="de">Deutsch</option><option value="en">English</option></select></div><div class="settings-section"><h3 data-lang-key="theme">Farbschema</h3><div class="radio-group" id="theme-selector"><label><input type="radio" name="theme" value="default" checked> <span data-lang-key="theme_default">Klassisch</span></label><label><input type="radio" name="theme" value="theme-night"> <span data-lang-key="theme_night">Nachtmodus</span></label><label><input type="radio" name="theme" value="theme-purple"> <span data-lang-key="theme_purple">Lila Traum</span></label></div></div></div></div>
         
         <div class="window" id="info-window" style="width: 500px; height: auto; top: 60px; left: 80px;"><div class="title-bar"><span data-lang-key="infoTitle">Willkommen!</span><div class="window-controls"><button class="minimize-btn">_</button><button class="maximize-btn">❐</button><button class="close-btn">x</button></div></div><div class="window-content"><h2 data-lang-key="infoHeading">Hey! Schön, dass du da bist!</h2><p data-lang-key="infoIntro">Dieses Portfolio ist ein bisschen anders...</p><ul><li data-lang-key="infoFeature1">...</li><li data-lang-key="infoFeature2">...</li><li data-lang-key="infoFeature3">...</li><li data-lang-key="infoFeature4">...</li></ul><p data-lang-key="infoOutro">Viel Spaß beim Entdecken!</p></div></div>
 
@@ -311,20 +277,6 @@
         import { getFirestore, collection, addDoc, query, onSnapshot, serverTimestamp, orderBy } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         document.addEventListener('DOMContentLoaded', async () => {
-             // --- INITIAL SETUP & DOM ELEMENT GRABBING ---
-            const windows = document.querySelectorAll('.window');
-            const taskbar = document.querySelector('.taskbar');
-            const startButton = document.getElementById('start-button');
-            const startMenu = document.getElementById('start-menu');
-            const desktop = document.getElementById('desktop');
-            const taskbarApps = document.querySelector('.taskbar-apps');
-            const contextMenu = document.getElementById('context-menu');
-            const guestbookForm = document.getElementById('guestbook-form');
-            const guestbookName = document.getElementById('guestbook-name');
-            const guestbookMessage = document.getElementById('guestbook-message');
-            const guestbookEntries = document.getElementById('guestbook-entries');
-            let zIndexCounter = 10;
-            
             // --- FIREBASE SETUP ---
             let db;
             const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
@@ -344,6 +296,16 @@
             } catch (error) {
                 console.error("Firebase initialization failed:", error);
             }
+
+            // --- INITIAL SETUP ---
+            const windows = document.querySelectorAll('.window');
+            const taskbar = document.querySelector('.taskbar');
+            const startButton = document.getElementById('start-button');
+            const startMenu = document.getElementById('start-menu');
+            const desktop = document.getElementById('desktop');
+            const taskbarApps = document.querySelector('.taskbar-apps');
+            const contextMenu = document.getElementById('context-menu');
+            let zIndexCounter = 10;
             
             // --- TRANSLATIONS ---
             const translations = {
@@ -972,6 +934,11 @@
             }
             
             // --- GUESTBOOK ---
+            const guestbookForm = document.getElementById('guestbook-form');
+            const guestbookName = document.getElementById('guestbook-name');
+            const guestbookMessage = document.getElementById('guestbook-message');
+            const guestbookEntries = document.getElementById('guestbook-entries');
+
             function listenForGuestbookEntries() {
                 if (!db) return;
                 const q = query(collection(db, `artifacts/${appId}/public/data/guestbook`), orderBy('timestamp', 'desc'));
